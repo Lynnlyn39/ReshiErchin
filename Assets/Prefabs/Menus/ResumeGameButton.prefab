@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 4306409143761158534}
   - component: {fileID: 4306409143761158535}
   - component: {fileID: 4306409143761158532}
-  - component: {fileID: 695754660078990380}
-  - component: {fileID: 1682319932367336488}
+  - component: {fileID: 5215210105305057643}
+  - component: {fileID: 2100628198}
   m_Layer: 5
-  m_Name: SaveGameButton
-  m_TagString: Untagged
+  m_Name: ResumeGameButton
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &695754660078990380
+--- !u!114 &5215210105305057643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,12 +134,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4306409143761158586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07055093bc2ba9b45a1ee02f3aa81850, type: 3}
+  m_Script: {fileID: 11500000, guid: ea6354a2b354d2240931aee5b3aa4c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sfxOnHover: {fileID: 0}
   _sfxOnClick: {fileID: 0}
---- !u!82 &1682319932367336488
+  _inGameMenuController: {fileID: 0}
+--- !u!82 &2100628198
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,7 +302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Save Game
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

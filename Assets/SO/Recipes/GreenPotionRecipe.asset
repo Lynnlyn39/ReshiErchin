@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86bf8d47348c4f448e5891422172eb3, type: 3}
   m_Name: GreenPotionRecipe
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Green Potion
   _description: 
   _image: {fileID: 0}
-  _ingredients: []
+  _ingredients:
+  - _ingredient: {fileID: 11400000, guid: 9fa1aeb0d4430a743be29b7e683bc055, type: 2}
+    _quantity: 2
+  - _ingredient: {fileID: 11400000, guid: e89532b52672ae74ba7a3e9f53cef652, type: 2}
+    _quantity: 5
