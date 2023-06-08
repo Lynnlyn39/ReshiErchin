@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class InventoryItem : MonoBehaviour
 {
-    [SerializeField] private InventoryItemData _data;
+    [SerializeField] private InventoryItemSO _data;
 
-    public InventoryItemData Data { get => _data; set => _data = value; }
+    public InventoryItemSO Data { get => _data; set => _data = value; }
 
 
     private void Awake()

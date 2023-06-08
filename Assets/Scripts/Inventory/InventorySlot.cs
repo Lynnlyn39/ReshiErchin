@@ -1,54 +1,65 @@
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-[System.Serializable]
 public class InventorySlot : MonoBehaviour
 {    
-    [SerializeField] private InventoryItemType _type;
-    [SerializeField] private Transform[] _transforms;
-    private List<InventoryItem> _items;
+    [SerializeField] private InventoryItemSO _itemData;
+    [SerializeField] private TextMeshProUGUI _nameText;
+    [SerializeField] private TextMeshProUGUI _stackText;
 
-    public void Awake()
+    private GameObject _instancedItem;
+
+    private int _stack = 0;
+
+    public InventoryItemSO ItemData { get => _itemData; set => _itemData = value; }
+    public int Stack
     {
-        Items = new List<InventoryItem>();
+        get => _stack;
+        set
+        {
+            _stack = value;
+            _stackText.text = $"({_stack})";
+        }
     }
 
-    public InventoryItemType Type { get => _type; set => _type = value; }
-    public List<InventoryItem> Items { get => _items; set => _items = value; }
-
-    public void AddItem(InventoryItem item)
+    private void Start()
     {
-        if (item.Data.Type == Type)
-        {
-            if (Items.Count < _transforms.Length)
-            {
+        _nameText.text = ItemData.Name;
+        _nameText.enabled = false;
+        _stackText.enabled = false;
+    }
 
-                item.transform.SetParent(transform);
-                item.transform.position = _transforms[Items.Count].position;
-                item.transform.rotation = _transforms[Items.Count].rotation;
-                //item.transform.localPosition = new Vector3(Random.value, 0.5f, Random.value);
-                //item.transform.localRotation = Quaternion.Euler(0f, Random.Range(0f, 120f), 0f);
-                Items.Add(item);
-            } else
+    public bool AddItem()
+    {
+        bool result = false;
+        if (Stack < ItemData.MaxStackSize)
+        {
+            if (Stack == 0)
             {
-                Debug.Log("Inventory is full");
+                _instancedItem = Instantiate(_itemData.Prefab, transform);
+                _nameText.enabled = true;
+                _stackText.enabled = true;
             }
-        } else
+            Stack++;    
+        } 
+        else
         {
-            Debug.LogError($"Wrong item type => slot={Type} item={item.Data.Type}");
+            Debug.Log("Inventory stack is full");
         }
+        return result;
     }
 
-    public bool RemoveItem(InventoryItem item)
-    {        
-        if (Items.Remove(item))
-        {
-            GameObject.Destroy(item);
-            //item.gameObject.SetActive(false);
-            return true;
-        } else
-        {
+    public bool RemoveItem()
+    {
+        if (Stack == 0)
             return false;
+
+        Stack--;
+
+        if (Stack == 0)
+        {
+            Destroy(_instancedItem);
         }
+        return true;
     }
 }
