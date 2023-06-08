@@ -146,6 +146,26 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.20784315
       objectReference: {fileID: 0}
+    - target: {fileID: 4542248428076572566, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248428076572566, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248428465387980, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248428465387980, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542248428465387983, guid: 013d454abbcd9914f9ad3dacef2112cf,
         type: 3}
       propertyPath: m_Value
@@ -174,6 +194,26 @@ PrefabInstance:
     - target: {fileID: 4542248428580877408, guid: 013d454abbcd9914f9ad3dacef2112cf,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248429025239250, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248429025239250, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248429025239250, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248429025239250, guid: 013d454abbcd9914f9ad3dacef2112cf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4542248429185461866, guid: 013d454abbcd9914f9ad3dacef2112cf,
@@ -289,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 4542248429185461879, guid: 013d454abbcd9914f9ad3dacef2112cf,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4542248429335746894, guid: 013d454abbcd9914f9ad3dacef2112cf,
         type: 3}
