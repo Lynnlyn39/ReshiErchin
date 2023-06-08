@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2532832453918641977}
-  - component: {fileID: 3510452895598749662}
+  - component: {fileID: 6285078965108203355}
   m_Layer: 5
   m_Name: LevelLoader
   m_TagString: LevelLoader
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3510452895598749662
+--- !u!114 &6285078965108203355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +42,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2532832453918641974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b229954645131814e9c9e290b0fdc5bb, type: 3}
+  m_Script: {fileID: 11500000, guid: f44ad46b1d4800644aff044347886eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _nextScene: 1
-  _mouseCursorSettings: {fileID: 0}
-  _crossFade: {fileID: 60255918959676739}
+  _crossFade: {fileID: 4745356966759504648}
 --- !u!1 &2532832453937818283
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +60,7 @@ GameObject:
   - component: {fileID: 2532832453937818284}
   - component: {fileID: 2532832453937818285}
   - component: {fileID: 6390893982975325807}
-  - component: {fileID: 60255918959676739}
+  - component: {fileID: 4745356966759504648}
   m_Layer: 5
   m_Name: CrossFade
   m_TagString: Untagged
@@ -107,7 +106,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
@@ -247,7 +248,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &60255918959676739
+--- !u!114 &4745356966759504648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,13 +257,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2532832453937818283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995631c2d79ebda45a7ea2e4cc4f724e, type: 3}
+  m_Script: {fileID: 11500000, guid: 25700a1ea67775b4299369f249771049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2532832454371986435}
-  _audioSource: {fileID: 6390893982975325807}
-  _fadeTime: 2
-  _fadeInMusic: 0
+  _audioSource: {fileID: 0}
+  _fadeTime: 1
+  _fadeInMusic: 1
 --- !u!1 &2532832454371986495
 GameObject:
   m_ObjectHideFlags: 0

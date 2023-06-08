@@ -147,8 +147,8 @@ GameObject:
   - component: {fileID: 7324141750076432957}
   - component: {fileID: 4819780526509820470}
   - component: {fileID: 50659352643962952}
+  - component: {fileID: 6019134122215818804}
   - component: {fileID: 4310057352306197950}
-  - component: {fileID: 4315367669832709502}
   m_Layer: 5
   m_Name: ButtonClose
   m_TagString: UI
@@ -259,6 +259,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6019134122215818804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083700072244087591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cbb77ab689c1a4db2066987caa7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxOnHover: {fileID: 0}
+  _sfxOnClick: {fileID: 0}
 --- !u!82 &4310057352306197950
 AudioSource:
   m_ObjectHideFlags: 0
@@ -355,20 +369,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4315367669832709502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083700072244087591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7406e30de88232d4a9844355f2422168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sfxOnHover: {fileID: 0}
-  _sfxOnClick: {fileID: 0}
 --- !u!1 &6187637669796691579
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ Animator:
   m_GameObject: {fileID: 7488745945427305034}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f2123a90e02fda94faad7a831604ef33, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec03708203c67dc4292bdbf1b2d9432d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 2
   m_ApplyRootMotion: 0

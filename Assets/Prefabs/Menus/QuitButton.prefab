@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4306409143761158534}
   - component: {fileID: 4306409143761158535}
   - component: {fileID: 4306409143761158532}
-  - component: {fileID: 3792046771534208848}
+  - component: {fileID: 7289523183399202129}
   - component: {fileID: 2791096976112269886}
   m_Layer: 5
   m_Name: QuitButton
@@ -35,7 +35,7 @@ RectTransform:
   m_Children:
   - {fileID: 4306409144232807726}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3792046771534208848
+--- !u!114 &7289523183399202129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4306409143761158586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b2d0fcbe95490448bd8ed7330e3a06, type: 3}
+  m_Script: {fileID: 11500000, guid: 438f8a49859920a4599072757600cb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sfxOnHover: {fileID: 0}
@@ -303,8 +303,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c05504221fdf6f34a941f16f4514163e, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c05504221fdf6f34a941f16f4514163e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

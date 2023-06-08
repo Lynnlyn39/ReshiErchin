@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4306409143761158534}
   - component: {fileID: 4306409143761158535}
   - component: {fileID: 4306409143761158532}
-  - component: {fileID: 7745357890324203497}
+  - component: {fileID: 7826482905003906479}
   - component: {fileID: 2100628198}
   m_Layer: 5
   m_Name: NewGameButton
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7745357890324203497
+--- !u!114 &7826482905003906479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,11 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4306409143761158586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bbf1923f60edc349acc8a2ef44682d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 32aea758708c2f74b859bdfa896160d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sfxOnHover: {fileID: 0}
   _sfxOnClick: {fileID: 0}
+  _loader: {fileID: 0}
 --- !u!82 &2100628198
 AudioSource:
   m_ObjectHideFlags: 0
@@ -303,8 +304,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c05504221fdf6f34a941f16f4514163e, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c05504221fdf6f34a941f16f4514163e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
