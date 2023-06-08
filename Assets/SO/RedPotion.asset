@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc8e608401c2941ba742f754c64c94, type: 3}
   m_Name: RedPotion
   m_EditorClassIdentifier: 
-  _id: GREENPOTION
-  _name: Green Potion
-  _type: 0
+  _id: REDPOTION
+  _name: Red Potion
+  _description: A Red potion ...
+  _maxStackSize: 10
   _icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 1532288154547255276, guid: 142aa1ee00a301044a198b3109c932be, type: 3}
