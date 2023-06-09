@@ -17,4 +17,4 @@ MonoBehaviour:
   _description: A blue potion ...
   _maxStackSize: 10
   _icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _prefab: {fileID: 5759982890318842787, guid: cd46ba0035c0fbf4ea2a5de67578fe5b, type: 3}
+  _prefab: {fileID: 3748117581069618353, guid: cb2955d410203bf41beba645e0094ea8, type: 3}

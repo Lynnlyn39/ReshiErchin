@@ -23,12 +23,12 @@ public class InventoryTest : MonoBehaviour
     public void AddItem()
     {
         if (index < _sampleItems.Length) 
-            _inventory.AddItem(_sampleItems[index++]);
+            _inventory.AddItem(_sampleItems[index++].Data);
     }
 
-    public void RemoveItem()
+    public void ResetMIx()
     {
-        
+        _inventory.ResetMix();
     }
 
 }

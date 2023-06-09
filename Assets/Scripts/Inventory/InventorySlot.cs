@@ -36,7 +36,7 @@ public class InventorySlot : MonoBehaviour
         {
             if (Stack == 0)
             {
-                _instancedItem = Instantiate(_itemData.Prefab, transform);
+                _instancedItem = Instantiate(_itemData.Prefab, transform);                
                 _nameText.enabled = true;
                 _stackText.enabled = true;
             }

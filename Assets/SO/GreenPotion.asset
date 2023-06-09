@@ -17,4 +17,4 @@ MonoBehaviour:
   _description: A green potion...
   _maxStackSize: 10
   _icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _prefab: {fileID: 7818844333032743569, guid: cc6d855c9c5315349bde9ba8bf4292b4, type: 3}
+  _prefab: {fileID: 3748117581069618353, guid: eb4c654daf850734fa2df4cf517b031f, type: 3}

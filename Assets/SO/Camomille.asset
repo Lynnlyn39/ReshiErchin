@@ -17,4 +17,4 @@ MonoBehaviour:
   _description: A nice herb ...
   _maxStackSize: 10
   _icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _prefab: {fileID: 2794090896851281349, guid: 0cceb9b67d9a0664b88173340088c03d, type: 3}
+  _prefab: {fileID: 3748117581069618353, guid: 7b4dc549b12ab4d4aa38e51227a1b88f, type: 3}
