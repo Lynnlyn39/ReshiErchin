@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4951904305284213156}
-  - component: {fileID: 2165872850846191036}
+  - component: {fileID: 4660295662544345005}
   m_Layer: 0
   m_Name: GreenPotion
   m_TagString: Untagged
@@ -140,7 +140,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2165872850846191036
+--- !u!114 &4660295662544345005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7818844333032743569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b3c4e4e3caabe148902f39aa19befd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ced23ab7bf90ac4ea976adb6d98e8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: e17bd18f49480774ea1bafd0d0098e46, type: 2}
+  _data: {fileID: 11400000, guid: 115d8f543271a994fb05b75363d8811e, type: 2}

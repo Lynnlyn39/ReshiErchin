@@ -40,6 +40,11 @@ public class Inventory : MonoBehaviour
             return slot.RemoveItem();
         }
         return false;
+    }
+
+    public void OnAddToMix()
+    {
 
     }
+
 }
