@@ -25,8 +25,8 @@ public class InventorySlot : MonoBehaviour
     private void Start()
     {
         _nameText.text = ItemData.Name;
-        _nameText.enabled = false;
-        _stackText.enabled = false;
+        _nameText.gameObject.SetActive(false);
+        _stackText.gameObject.SetActive(false);
     }
 
     public bool AddItem()
@@ -36,9 +36,9 @@ public class InventorySlot : MonoBehaviour
         {
             if (Stack == 0)
             {
-                _instancedItem = Instantiate(_itemData.Prefab, transform);                
-                _nameText.enabled = true;
-                _stackText.enabled = true;
+                _instancedItem = Instantiate(_itemData.Prefab, transform);
+                _nameText.gameObject.SetActive(true);
+                _stackText.gameObject.SetActive(true);
             }
             Stack++;    
         } 

@@ -113,8 +113,9 @@ public class Inventory : MonoBehaviour
     }
 
     IEnumerator MoveToMix(InventoryItem p_item)
-    {
+    {        
         GameObject item = Instantiate(p_item.Data.Prefab, transform);
+        _pestle.AddIngredient(item.GetComponent<InventoryItem>());
         item.transform.position = p_item.transform.position;
         float time = 0;
         Vector3 startPosition = item.transform.position;        
@@ -125,8 +126,7 @@ public class Inventory : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        item.transform.position = endPosition;
-        _pestle.AddIngredient(item.GetComponent<InventoryItem>());
+        item.transform.position = endPosition;        
     }    
 
 }
