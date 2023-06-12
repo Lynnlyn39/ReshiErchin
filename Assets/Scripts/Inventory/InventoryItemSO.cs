@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "InventoryItemData", menuName = "ReshiErchin/InventoryItemData")]
+[CreateAssetMenu(fileName = "InventoryItem", menuName = "ReshiErchin/InventoryItem")]
 public class InventoryItemSO : BookEntry
 {
     [SerializeField] private int _maxStackSize;    
