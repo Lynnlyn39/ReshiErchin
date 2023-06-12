@@ -10,6 +10,7 @@ public class ThirdPersonController : MonoBehaviour
     //Input fields
     private IA_ThirdPersonController _playerActionAsset;
     private InputAction _move;
+    private InputAction _intereact;
 
     //movement fields
     private Rigidbody _rb;
@@ -19,6 +20,9 @@ public class ThirdPersonController : MonoBehaviour
 
     [SerializeField] private Camera playerCamera;
 
+    //npc intereact
+    public GameObject currentNpc;
+
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();
@@ -26,8 +30,19 @@ public class ThirdPersonController : MonoBehaviour
     }
     private void OnEnable()
     {
+        _playerActionAsset.Player.Interact.started += Interact;
         _move = _playerActionAsset.Player.Move;
         _playerActionAsset.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        _playerActionAsset.Player.Interact.started -= Interact;
+        _playerActionAsset.Player.Disable();
+    }
+
+    private void Interact(InputAction.CallbackContext context)
+    {
+        NpcCheck();
     }
 
     private void FixedUpdate()
@@ -49,6 +64,16 @@ public class ThirdPersonController : MonoBehaviour
 
         LookAt();
     }
+
+    private void NpcCheck()
+    {
+        if(currentNpc != null)
+        {
+            //Do Interact Logic
+        }
+    }
+
+    #region CameraControl
     private void LookAt()
     {
         Vector3 direction = _rb.velocity;
@@ -71,9 +96,6 @@ public class ThirdPersonController : MonoBehaviour
         right.y = 0;
         return right.normalized;
     }
+    #endregion
 
-    private void OnDisable()
-    {
-        _playerActionAsset.Player.Disable();
-    }
 }
