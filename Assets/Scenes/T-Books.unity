@@ -155,6 +155,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 927045842}
+  - {fileID: 529409457}
   - {fileID: 226896110}
   - {fileID: 165834105}
   - {fileID: 938537537}
@@ -744,7 +745,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 529409457}
   - {fileID: 1919885985}
   m_Father: {fileID: 165834105}
   m_RootOrder: -1
@@ -1144,7 +1144,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529409456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1152,13 +1152,13 @@ RectTransform:
   - {fileID: 227080034}
   - {fileID: 1256379350}
   - {fileID: 1111338080}
-  m_Father: {fileID: 343899844}
+  m_Father: {fileID: 122819144}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 673, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 332.453, y: -8.414917}
+  m_SizeDelta: {x: -752.1998, y: -86.96765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529409458
 MonoBehaviour:
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The title of the recipe
+  m_text: The title of the book entry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3536,15 +3536,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1919885987
 CanvasRenderer:
@@ -3570,7 +3570,6 @@ MonoBehaviour:
   _icon: {fileID: 1919885986}
   _objectsToEnable: []
   _bookEntry: {fileID: 11400000, guid: c8f9c7c34391b504b8d51266a5f50520, type: 2}
-  _icon: {fileID: 0}
   _name: {fileID: 244373759}
 --- !u!1 &1962758315
 GameObject:

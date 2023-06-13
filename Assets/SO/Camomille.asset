@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc8e608401c2941ba742f754c64c94, type: 3}
   m_Name: Camomille
   m_EditorClassIdentifier: 
-  _id: CAMOMILLE
   _name: Camomille
   _description: A nice herb ...
-  _maxStackSize: 10
-  _icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _icon: {fileID: 0}
   _prefab: {fileID: 3748117581069618353, guid: 7b4dc549b12ab4d4aa38e51227a1b88f, type: 3}
+  _maxStackSize: 10
