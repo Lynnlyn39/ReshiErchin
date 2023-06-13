@@ -10,6 +10,7 @@ public class ThirdPersonController : MonoBehaviour
     //Input fields
     private IA_ThirdPersonController _playerActionAsset;
     private InputAction _move;
+    private Interactor _interactor;
 
     //movement fields
     private Rigidbody _rb;
@@ -23,11 +24,21 @@ public class ThirdPersonController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _playerActionAsset = new IA_ThirdPersonController();
+        _interactor = GetComponent<Interactor>();
     }
     private void OnEnable()
     {
         _move = _playerActionAsset.Player.Move;
         _playerActionAsset.Player.Enable();
+        _playerActionAsset.Player.Interact.performed += Interact;
+    }
+
+    private void Interact(InputAction.CallbackContext context)
+    {
+        if (_interactor.canInteract)
+        {
+            _interactor.interactable.Interact(_interactor);
+        }
     }
 
     private void FixedUpdate()
