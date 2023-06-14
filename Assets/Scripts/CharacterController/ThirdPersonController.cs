@@ -1,37 +1,76 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class ThirdPersonController : MonoBehaviour
 {
     //Input fields
     private IA_ThirdPersonController _playerActionAsset;
-    private InputAction _move;
+    private CharacterController _characterController;
+    private Animator _animator;
+
+    int isWalkingHash;
+    int isRunningHash;
+
+    private Vector2 _currentMovementInput;
+    private Vector3 _currentMovement;
+    private Vector3 _currentRunMovement;
+
+    bool _isMovementPressed;
+    bool _isRunPressed;
+    float _rotationFactor = 15f;
+    float _runMultiplier = 3f;
+
     private Interactor _interactor;
 
     //movement fields
-    private Rigidbody _rb;
-    [SerializeField] private float movementForce = 1f;
-    [SerializeField] private float maxSpeed = 5f;
-    private Vector3 forceDirection = Vector3.zero;
+    
+    //[SerializeField] private float _speed = 1f;
+    //[SerializeField] private float _trunSmoothTime = 0.1f;
+    //private float _turnSmoothVelocity;
 
     [SerializeField] private Camera playerCamera;
 
     void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
         _playerActionAsset = new IA_ThirdPersonController();
+        _characterController = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
+
+        isWalkingHash = Animator.StringToHash("isWalking");
+        isRunningHash = Animator.StringToHash("isRunning");
+
+        _playerActionAsset.Player.Move.started += OnMovementInput;
+        _playerActionAsset.Player.Move.canceled += OnMovementInput;
+        _playerActionAsset.Player.Move.performed += OnMovementInput;
+
+        _playerActionAsset.Player.Run.started += OnRun;
+        _playerActionAsset.Player.Run.canceled += OnRun;
+
         _interactor = GetComponent<Interactor>();
     }
-    private void OnEnable()
+    void OnMovementInput (InputAction.CallbackContext context)
     {
-        _move = _playerActionAsset.Player.Move;
-        _playerActionAsset.Player.Enable();
-        _playerActionAsset.Player.Interact.performed += Interact;
+        _currentMovementInput = context.ReadValue<Vector2>();
+
+        _currentMovement.x = _currentMovementInput.x;
+        _currentMovement.z = _currentMovementInput.y;
+
+        _currentRunMovement.x = _currentMovementInput.x * _runMultiplier;
+        _currentRunMovement.z = _currentMovementInput.y * _runMultiplier;
+
+        _isMovementPressed = _currentMovementInput.x != 0 || _currentMovementInput.y != 0;
     }
+    void OnRun (InputAction.CallbackContext context)
+    {
+        _isRunPressed = context.ReadValueAsButton();
+    }
+    
 
     private void Interact(InputAction.CallbackContext context)
     {
@@ -43,46 +82,89 @@ public class ThirdPersonController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        forceDirection += _move.ReadValue<Vector2>().x * GetCameraRight(playerCamera) * movementForce;
-        forceDirection += _move.ReadValue<Vector2>().y * GetCameraFoward(playerCamera) * movementForce;
-
-        _rb.AddForce(forceDirection, ForceMode.Impulse);
-        forceDirection = Vector3.zero;
-
-        if(_rb.velocity.y< 0f)
-            _rb.velocity += Vector3.down * Physics.gravity.y * Time.fixedDeltaTime;
-
-        Vector3 horizontalVelocity = _rb.velocity;
-        horizontalVelocity.y = 0f;
-
-        if (horizontalVelocity.sqrMagnitude > maxSpeed * maxSpeed)
-            _rb.velocity = horizontalVelocity.normalized * maxSpeed + Vector3.up * _rb.velocity.y;
-
-        LookAt();
-    }
-    private void LookAt()
-    {
-        Vector3 direction = _rb.velocity;
-        direction.y = 0;
-        if (_move.ReadValue<Vector2>().sqrMagnitude > 0.1f && direction.sqrMagnitude > 0.1f)
-            this._rb.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        HandleGravity();
+        HandleRotation();
+        HandleAnimation();
+        
+        if (_isRunPressed)
+        {
+            _characterController.Move(_currentRunMovement * Time.fixedDeltaTime);
+        }
         else
-            _rb.angularVelocity = Vector3.zero;
-    }
-    private Vector3 GetCameraFoward(Camera playerCamera)
-    {
-        Vector3 foward = playerCamera.transform.forward;
-        foward.y = 0;
-        return foward.normalized;
-    }
+        {
+            _characterController.Move(_currentMovement * Time.fixedDeltaTime);
+        }
+        
 
-    private Vector3 GetCameraRight(Camera playerCamera)
-    {
-        Vector3 right = playerCamera.transform.right;
-        right.y = 0;
-        return right.normalized;
-    }
+        //if (direction.magnitude >= 0.01)
+        //{
+        //    
+        //    float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _trunSmoothTime);
+        //    transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        //    Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        //    _characterController.Move(moveDir * _speed * Time.fixedDeltaTime);
+        //}
 
+            
+    }
+    private void HandleRotation()
+    {
+        Vector3 positionToLookAt;
+        positionToLookAt.x = _currentMovement.x;
+        positionToLookAt.y = 0;
+        positionToLookAt.z = _currentMovement.z;
+
+        Quaternion currentRotation = transform.rotation;
+        if(_isMovementPressed)
+        {
+            Quaternion targetrRotation = Quaternion.LookRotation(positionToLookAt);
+            transform.rotation = Quaternion.Slerp(currentRotation, targetrRotation, _rotationFactor * Time.fixedDeltaTime);
+        }
+    }
+    private void HandleAnimation()
+    {
+        bool isWalking = _animator.GetBool(isWalkingHash);
+        bool isRunning = _animator.GetBool(isRunningHash);
+
+        if(_isMovementPressed && !isWalking)
+        {
+            _animator.SetBool(isWalkingHash, true);
+        }
+        else if(!_isMovementPressed && isWalking)
+        {
+            _animator.SetBool(isWalkingHash, false);
+        }
+
+        if((_isMovementPressed && _isRunPressed) && !isRunning)
+        {
+            _animator.SetBool(isRunningHash, true);
+        }
+        else if((!_isMovementPressed || !_isRunPressed) && isRunning)
+        {
+            _animator.SetBool(isRunningHash, false);
+        }
+    }
+    private void HandleGravity()
+    {
+        if (_characterController.isGrounded)
+        {
+            float groundedGravity = -0.5f;
+            _currentMovement.y = groundedGravity;
+            _currentRunMovement.y = groundedGravity;
+        }
+        else
+        {
+            float gravity = -4.8f;
+            _currentMovement.y = gravity;
+            _currentRunMovement.y = gravity;
+        }
+    }
+    private void OnEnable()
+    {
+        _playerActionAsset.Player.Enable();
+
+        _playerActionAsset.Player.Interact.performed += Interact;
+    }
     private void OnDisable()
     {
         _playerActionAsset.Player.Disable();
