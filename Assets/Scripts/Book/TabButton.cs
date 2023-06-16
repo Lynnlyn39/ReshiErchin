@@ -9,8 +9,8 @@ namespace CustomUI
     public class TabButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] protected TabGroup _tabGroup;
-        [SerializeField] protected Image _icon;
         [SerializeField] protected List<GameObject> _objectsToEnable;
+        protected Image _icon;
 
         public Image Icon { get => _icon; set => _icon = value; }
         public List<GameObject> ObjectsToEnable { get => _objectsToEnable; set => _objectsToEnable = value; }

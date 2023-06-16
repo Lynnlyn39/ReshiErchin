@@ -6,30 +6,29 @@ namespace CustomUI
 {
     public class BookSlotGroup : TabGroup
     {
-        [SerializeField] protected Image _detailIcon;
-        [SerializeField] protected TextMeshProUGUI _detailTitle;
-        [SerializeField] protected TextMeshProUGUI _detailDescription;
+        [SerializeField] protected BookDetail _detail;
 
         public void OnTabSelected(BookSlot tab)
         {
             _selectedTab = tab;
             ResetTabs();
-            tab.Icon.sprite = _tabActive;
-            _detailIcon = tab.BookEntry.Icon;
-            _detailTitle.text = tab.BookEntry.Name;
-            _detailDescription.text = tab.BookEntry.Description;
+            tab.Icon = _tabActive;
+            _detail.Icon = tab.BookEntry.Icon;
+            _detail.Title.text = tab.BookEntry.Name;
+            _detail.Description.text = tab.BookEntry.Description;
+            tab.Selected.SetActive(true);
         }
 
         public override void ResetTabs()
         {
-            foreach (TabButton tab in _tabs)
+            foreach (BookSlot tab in _tabs)
             {
                 if (_selectedTab != null && tab == _selectedTab) { continue; }
-                tab.Icon.sprite = _tabIdle;
-                _detailIcon = null;
-                _detailTitle.text = "";
-                _detailDescription.text = "";
-
+                tab.Icon = _tabIdle;
+                _detail.Icon = null;
+                _detail.Title.text = "";
+                _detail.Description.text = "";
+                tab.Selected.SetActive(false);
             }
         }
     }

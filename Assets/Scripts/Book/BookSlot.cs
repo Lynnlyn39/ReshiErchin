@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CustomUI
 {
@@ -7,13 +8,19 @@ namespace CustomUI
     {
         [SerializeField] private BookEntry _bookEntry;
         [SerializeField] private TextMeshProUGUI _name;
+        [SerializeField] private GameObject _selected;
 
         public BookEntry BookEntry { get => _bookEntry; set => _bookEntry = value; }
+        public GameObject Selected { get => _selected; set => _selected = value; }
 
         private void Start()
         {
-            Icon = _bookEntry.Icon;
-            _name.text = _bookEntry.Name;
+            if (_bookEntry)
+            {
+                Icon = _bookEntry.Icon;
+                _name.text = _bookEntry.Name;
+            }
+            _selected.SetActive(false);
         }
     }
 }

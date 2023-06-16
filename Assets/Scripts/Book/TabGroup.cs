@@ -8,9 +8,9 @@ namespace CustomUI
     public class TabGroup : MonoBehaviour
     {
         [SerializeField] protected List<TabButton> _tabs;
-        [SerializeField] protected Sprite _tabIdle;
-        [SerializeField] protected Sprite _tabHover;
-        [SerializeField] protected Sprite _tabActive;
+        [SerializeField] protected Image _tabIdle;
+        [SerializeField] protected Image _tabHover;
+        [SerializeField] protected Image _tabActive;
         [SerializeField] protected TabButton _selectedTab;
 
         public void Subscribe(TabButton tab)
@@ -26,21 +26,21 @@ namespace CustomUI
             ResetTabs();
             if (_selectedTab == null || tab != _selectedTab)
             {
-                tab.Icon.sprite = _tabHover;
+                tab.Icon = _tabHover;
             }
         }
 
         public void OnTabExit(TabButton tab)
         {
             ResetTabs();            
-            tab.Icon.sprite = _tabIdle;
+            tab.Icon = _tabIdle;
         }
 
         public virtual void OnTabSelected(TabButton tab)
         {
             _selectedTab = tab;
             ResetTabs();
-            tab.Icon.sprite = _tabActive;
+            tab.Icon = _tabActive;
             foreach (GameObject go in tab.ObjectsToEnable)
             {
                 go.SetActive(true);
@@ -52,7 +52,7 @@ namespace CustomUI
             foreach(TabButton tab in _tabs)
             {
                 if (_selectedTab != null && tab == _selectedTab) { continue; }
-                tab.Icon.sprite = _tabIdle;
+                tab.Icon = _tabIdle;
                 foreach (GameObject go in tab.ObjectsToEnable)
                 {
                     go.SetActive(false);
