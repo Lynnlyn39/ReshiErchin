@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ea5eca611248542aee3cebc8231ea4, type: 3}
+  m_Name: Yarrow
+  m_EditorClassIdentifier: 
+  _name: Infusion Yarrow
+  _description: 
+  _icon: {fileID: 0}
+  _prefab: {fileID: 4255275092396459944, guid: b73cc5efa5fb749448208ad2995c16cf, type: 3}
+  _ingredients:
+  - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
+    _quantity: 2
+  - _ingredient: {fileID: 11400000, guid: 1acbc7b0bf068724b88a530e4fb51b49, type: 2}
+    _quantity: 3

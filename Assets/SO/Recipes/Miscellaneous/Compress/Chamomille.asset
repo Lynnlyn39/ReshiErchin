@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ea5eca611248542aee3cebc8231ea4, type: 3}
+  m_Name: Chamomille
+  m_EditorClassIdentifier: 
+  _name: Compress Chamomille
+  _description: 
+  _icon: {fileID: 0}
+  _prefab: {fileID: 3544246039359653967, guid: ea1a434c75946ca49a78c6db430a4883, type: 3}
+  _ingredients:
+  - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
+    _quantity: 2
+  - _ingredient: {fileID: 11400000, guid: 9400a20e72fad7f41b0715eaaf5a0c91, type: 2}
+    _quantity: 2

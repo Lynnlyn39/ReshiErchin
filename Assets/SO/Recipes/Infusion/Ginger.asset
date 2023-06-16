@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ea5eca611248542aee3cebc8231ea4, type: 3}
+  m_Name: Ginger
+  m_EditorClassIdentifier: 
+  _name: Infusion Ginger
+  _description: 
+  _icon: {fileID: 0}
+  _prefab: {fileID: 7055425988313603546, guid: c9026e1ef9c548d40b6158c3658a2ed9, type: 3}
+  _ingredients:
+  - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
+    _quantity: 2
+  - _ingredient: {fileID: 11400000, guid: 6b1992bf3f0fed542872a31799389def, type: 2}
+    _quantity: 1
+  - _ingredient: {fileID: 11400000, guid: f2c3712594c2d274e9144141b4061515, type: 2}
+    _quantity: 1
+  - _ingredient: {fileID: 11400000, guid: c0c42a76d1fa1574ca9d164392e80cdb, type: 2}
+    _quantity: 1

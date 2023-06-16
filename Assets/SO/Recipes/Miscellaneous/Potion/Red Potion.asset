@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ea5eca611248542aee3cebc8231ea4, type: 3}
+  m_Name: Red Potion
+  m_EditorClassIdentifier: 
+  _name: Red Potion
+  _description: 
+  _icon: {fileID: 0}
+  _prefab: {fileID: 3904257780681097376, guid: d2d62d0f3f9ced04cbde43da90c2280b, type: 3}
+  _ingredients:
+  - _ingredient: {fileID: 0}
+    _quantity: 1
+  - _ingredient: {fileID: 11400000, guid: 8e3acbf4d68fc8b48ac3f7b7ffe0c6b0, type: 2}
+    _quantity: 1

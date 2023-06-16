@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ea5eca611248542aee3cebc8231ea4, type: 3}
+  m_Name: Fennel
+  m_EditorClassIdentifier: 
+  _name: Infusion Fennel
+  _description: 
+  _icon: {fileID: 0}
+  _prefab: {fileID: 8129869415228073268, guid: e636f6a1167082b44b5179f8a3d73194, type: 3}
+  _ingredients:
+  - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
+    _quantity: 6
+  - _ingredient: {fileID: 11400000, guid: 4ed4a644455381149a0befa08717e7df, type: 2}
+    _quantity: 7
