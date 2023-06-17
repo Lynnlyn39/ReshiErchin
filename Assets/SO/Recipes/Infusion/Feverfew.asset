@@ -15,7 +15,10 @@ MonoBehaviour:
   _name: Infusion Feverfew
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 8407593921287721143, guid: 4e8035e2d72ba5245a75883bbf78ccac, type: 3}
+  _maxStackSize: 0
+  _preparationType: 1
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2

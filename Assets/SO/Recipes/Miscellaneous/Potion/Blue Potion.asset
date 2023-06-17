@@ -15,7 +15,10 @@ MonoBehaviour:
   _name: Blue Potion
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 5605509334946222767, guid: da6edbae5df18164c9a151abd4b22adc, type: 3}
+  _maxStackSize: 0
+  _preparationType: 6
   _ingredients:
   - _ingredient: {fileID: 0}
     _quantity: 1

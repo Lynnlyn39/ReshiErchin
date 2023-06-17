@@ -15,7 +15,10 @@ MonoBehaviour:
   _name: Poultice Feverfew
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 7533875353608638514, guid: 719ee20675816374e8df946ef8ace7fd, type: 3}
+  _maxStackSize: 0
+  _preparationType: 2
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2

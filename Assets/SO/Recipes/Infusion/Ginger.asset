@@ -15,7 +15,10 @@ MonoBehaviour:
   _name: Infusion Ginger
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 7055425988313603546, guid: c9026e1ef9c548d40b6158c3658a2ed9, type: 3}
+  _maxStackSize: 0
+  _preparationType: 1
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2

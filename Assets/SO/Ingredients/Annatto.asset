@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Annatto
   m_EditorClassIdentifier: 
-  _name: 
-  _description: 
-  _icon: {fileID: 0}
-  _prefab: {fileID: 0}
+  _name: Annatto
+  _description: 'Annatto has many properties ... '
+  _icon: {fileID: 21300000, guid: f33a5f1414ad6274097b9d0fce88935f, type: 3}
+  info:
+  - {fileID: 21300000, guid: 19575bfdcb5c4a6419db380f52e59cf6, type: 3}
+  - {fileID: 21300000, guid: abe5586864c00354888fae8ca5d82678, type: 3}
+  _prefab: {fileID: 6089053029308068764, guid: 186c5695aa564c6459ac1556dd94bef1, type: 3}
