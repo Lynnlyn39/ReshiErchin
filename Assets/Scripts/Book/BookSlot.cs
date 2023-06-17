@@ -17,7 +17,7 @@ namespace CustomUI
         {
             if (_bookEntry)
             {
-                Icon = _bookEntry.Icon;
+                Icon.sprite = _bookEntry.Icon;
                 _name.text = _bookEntry.Name;
             }
             _selected.SetActive(false);

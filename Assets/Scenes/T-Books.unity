@@ -1158,7 +1158,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (03)
+      value: BookSlot (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1373,7 +1373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tabGroup: {fileID: 927045843}
-  _icon: {fileID: 373023271, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
   _objectsToEnable:
   - {fileID: 1464669989}
 --- !u!1001 &391461252
@@ -2562,7 +2561,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tabGroup: {fileID: 927045843}
-  _icon: {fileID: 0}
   _objectsToEnable:
   - {fileID: 343899843}
 --- !u!1001 &911701477
@@ -2820,7 +2818,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (04)
+      value: BookSlot (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5034,7 +5032,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tabGroup: {fileID: 927045843}
-  _icon: {fileID: 0}
   _objectsToEnable:
   - {fileID: 527750566}
 --- !u!1001 &1367286978
@@ -7320,7 +7317,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (03)
+      value: BookSlot (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7990,7 +7987,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (04)
+      value: BookSlot (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

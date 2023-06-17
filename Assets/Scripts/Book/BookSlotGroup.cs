@@ -13,7 +13,7 @@ namespace CustomUI
             _selectedTab = tab;
             ResetTabs();
             tab.Icon = _tabActive;
-            _detail.Icon = tab.BookEntry.Icon;
+            _detail.Icon.sprite = tab.BookEntry.Icon;
             _detail.Title.text = tab.BookEntry.Name;
             _detail.Description.text = tab.BookEntry.Description;
             tab.Selected.SetActive(true);
