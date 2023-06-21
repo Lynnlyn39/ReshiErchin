@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Carob
   m_EditorClassIdentifier: 
   _name: Decoction Carob
-  _description: 
-  _icon: {fileID: 0}
-  info: []
+  _description: Mix 2 of water with 1 carob
+  _icon: {fileID: 21300000, guid: 111f5bf548476cc4fa0ea85a1664b4d7, type: 3}
+  info:
+  - {fileID: 21300000, guid: 59241ae5800bf824bb29ca2481d13f7f, type: 3}
+  - {fileID: 21300000, guid: e3f2ddd2906745247b9ae99ad82bc57d, type: 3}
   _prefab: {fileID: 5230618643118519565, guid: ad6a4019080b2754797dbb08473907fd, type: 3}
   isKnown: 0
   _maxStackSize: 10

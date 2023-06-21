@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Annatto
   m_EditorClassIdentifier: 
   _name: Decoction Annatto
-  _description: Made of Annatto
+  _description: Mix 4 of water with 1 annatto
   _icon: {fileID: 21300000, guid: 82df88d29bc876a40be4d33d21213200, type: 3}
   info: []
   _prefab: {fileID: 5883732679073065268, guid: 8776b7bb0c391f544ba75c8791193ded, type: 3}
