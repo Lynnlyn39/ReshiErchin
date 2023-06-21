@@ -15,7 +15,11 @@ MonoBehaviour:
   _name: Decoction Horsetail
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 2636275239409046754, guid: 1859e4da7af8d5840a20008931070969, type: 3}
+  isKnown: 0
+  _maxStackSize: 10
+  _preparationType: 0
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 4

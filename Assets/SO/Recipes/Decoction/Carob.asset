@@ -15,7 +15,11 @@ MonoBehaviour:
   _name: Decoction Carob
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 5230618643118519565, guid: ad6a4019080b2754797dbb08473907fd, type: 3}
+  isKnown: 0
+  _maxStackSize: 10
+  _preparationType: 0
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2

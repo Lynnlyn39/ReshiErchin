@@ -15,7 +15,11 @@ MonoBehaviour:
   _name: Decoction Ginger
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 4002786901669572159, guid: adb5278f20edb7a479557ae5cc3993ba, type: 3}
+  isKnown: 0
+  _maxStackSize: 10
+  _preparationType: 0
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2

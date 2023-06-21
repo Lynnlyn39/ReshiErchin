@@ -19,10 +19,13 @@ namespace CustomUI
                 tab.Icon = _tabActive;
                 if (tab.BookEntry)
                 {
-                    if (_detail.Icon)
+                    if (tab.BookEntry.Icon && _detail.Icon)
                     {
                         _detail.Icon.sprite = tab.BookEntry.Icon;
                         _detail.Icon.color = new Color(_detail.Icon.color.r, _detail.Icon.color.g, _detail.Icon.color.b, 1f);
+                    } else
+                    {
+                        Debug.LogWarning($"{tab.BookEntry.Name} has not Icon defined. Fix it in the SO");
                     }
 
                     _detail.Title.text = tab.BookEntry.Name;
@@ -53,7 +56,7 @@ namespace CustomUI
             {
                 if (_selectedTab != null && tab == _selectedTab) { continue; }
                 //tab.Icon = _tabIdle;
-                _detail.Icon = null;
+                _detail.Icon = _defaultIcon;
                 _detail.Title.text = "";
                 _detail.Description.text = "";
                 tab.Selected.SetActive(false);

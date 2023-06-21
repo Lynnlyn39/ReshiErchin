@@ -19,3 +19,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a1dd46da0b7764040b395cec69f0819b, type: 3}
   - {fileID: 21300000, guid: ccc750cbf45020f438c331d74f74955b, type: 3}
   _prefab: {fileID: 5035777814072642419, guid: 310d721ea0bc3024ba53600832134934, type: 3}
+  isKnown: 0
+  _maxStackSize: 20

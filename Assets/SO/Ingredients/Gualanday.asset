@@ -15,4 +15,7 @@ MonoBehaviour:
   _name: 
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 0}
+  isKnown: 0
+  _maxStackSize: 20

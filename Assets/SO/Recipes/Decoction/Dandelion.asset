@@ -15,7 +15,11 @@ MonoBehaviour:
   _name: Decoction Dandelion
   _description: 
   _icon: {fileID: 0}
+  info: []
   _prefab: {fileID: 7579270463804449856, guid: 8b2a8298e249d4242a7773f4822d8149, type: 3}
+  isKnown: 0
+  _maxStackSize: 10
+  _preparationType: 0
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2

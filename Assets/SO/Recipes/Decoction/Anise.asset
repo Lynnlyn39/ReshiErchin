@@ -18,7 +18,7 @@ MonoBehaviour:
   info: []
   _prefab: {fileID: 7618398199485319486, guid: 59ce787fd3090ab40aec53c82380213a, type: 3}
   isKnown: 0
-  _maxStackSize: 0
+  _maxStackSize: 10
   _preparationType: 0
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
