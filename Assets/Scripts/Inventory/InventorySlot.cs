@@ -39,6 +39,7 @@ public class InventorySlot : MonoBehaviour
                 _instancedItem = Instantiate(_itemData.Prefab, transform);
                 _nameText.gameObject.SetActive(true);
                 _stackText.gameObject.SetActive(true);
+                ItemData.IsKnown = true;
             }
             Stack++;    
         } 

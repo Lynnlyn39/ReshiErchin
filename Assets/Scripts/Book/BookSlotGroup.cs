@@ -38,6 +38,11 @@ namespace CustomUI
             }
         }
 
+        public void OnTabEnter(BookSlot tab)
+        {
+            Debug.Log("OnTabEnter");
+        }
+
         public override void ResetTabs()
         {
             foreach (BookSlot tab in _tabs)

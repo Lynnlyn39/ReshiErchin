@@ -21,7 +21,7 @@ namespace CustomUI
             _tabs.Add(tab);
         }
 
-        public void OnTabEnter(TabButton tab)
+        public virtual void OnTabEnter(TabButton tab)
         {
             ResetTabs();
             if (_selectedTab == null || tab != _selectedTab)

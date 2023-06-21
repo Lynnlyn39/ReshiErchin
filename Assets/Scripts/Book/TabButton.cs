@@ -24,16 +24,19 @@ namespace CustomUI
 
         public virtual void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("OnPointerClick");
             _tabGroup.OnTabSelected(this);
         }
 
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
+            Debug.Log("OnTabEnter");
             _tabGroup.OnTabEnter(this);
         }
 
         public virtual void OnPointerExit(PointerEventData eventData)
         {
+            Debug.Log("OnPointerExit");
             _tabGroup.OnTabExit(this);
         }
     }
