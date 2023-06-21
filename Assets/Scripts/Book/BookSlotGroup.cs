@@ -20,7 +20,10 @@ namespace CustomUI
                 if (tab.BookEntry)
                 {
                     if (_detail.Icon)
+                    {
                         _detail.Icon.sprite = tab.BookEntry.Icon;
+                        _detail.Icon.color = new Color(_detail.Icon.color.r, _detail.Icon.color.g, _detail.Icon.color.b, 1f);
+                    }
 
                     _detail.Title.text = tab.BookEntry.Name;
                     _detail.Description.text = tab.BookEntry.Description;
@@ -28,6 +31,7 @@ namespace CustomUI
                     for (int i=0; i < tab.BookEntry.Info.Length; i++)
                     {
                         _detail.Info[i].sprite = tab.BookEntry.Info[i];
+                        _detail.Info[i].color = new Color(_detail.Info[i].color.r, _detail.Info[i].color.g, _detail.Info[i].color.b, 1f);
                     }
 
                 } else

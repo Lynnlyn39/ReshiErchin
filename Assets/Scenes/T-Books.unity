@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1089,8 +1089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0.8000001, g: 0.854902, b: 0.8078432, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1165,8 +1165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2018,8 +2018,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4731,7 +4731,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _bookEntry
       value: 
-      objectReference: {fileID: 11400000, guid: 86efb033978bf4d4d80117f1fb7e6bd3,
+      objectReference: {fileID: 11400000, guid: beeff2151082618479a71e2993526023,
         type: 2}
     - target: {fileID: 5909750195708868532, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
@@ -4883,7 +4883,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _bookEntry
       value: 
-      objectReference: {fileID: 11400000, guid: beeff2151082618479a71e2993526023,
+      objectReference: {fileID: 11400000, guid: e49fbcfd2d0fa194aaa6f1b646461f42,
         type: 2}
     - target: {fileID: 5909750195708868532, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
@@ -5618,8 +5618,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6061,6 +6061,12 @@ PrefabInstance:
       propertyPath: _tabGroup
       value: 
       objectReference: {fileID: 1464669993}
+    - target: {fileID: 4530148121998320587, guid: cccdc63f2492afe49945fcc0b11d0f6b,
+        type: 3}
+      propertyPath: _bookEntry
+      value: 
+      objectReference: {fileID: 11400000, guid: e47ff55851aacce409e5bbfc3465c18b,
+        type: 2}
     - target: {fileID: 5909750195708868532, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9709,7 +9715,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _bookEntry
       value: 
-      objectReference: {fileID: 11400000, guid: 440d10f358e33e9489874b8d33823e5a,
+      objectReference: {fileID: 11400000, guid: 0e03b011fd468c0438686f33d5d7bae9,
         type: 2}
     - target: {fileID: 5909750195708868532, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
