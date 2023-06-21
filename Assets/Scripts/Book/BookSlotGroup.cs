@@ -8,7 +8,7 @@ namespace CustomUI
     {
         [SerializeField] protected BookDetail _detail;
         [Tooltip("Image used by default and when the item is not known")]
-        [SerializeField] protected Image _defaultIcon;
+        [SerializeField] protected Sprite _defaultIcon;
 
         public void OnTabSelected(BookSlot tab)        
         {
@@ -56,10 +56,17 @@ namespace CustomUI
             {
                 if (_selectedTab != null && tab == _selectedTab) { continue; }
                 //tab.Icon = _tabIdle;
-                _detail.Icon = _defaultIcon;
+                _detail.Icon.sprite = _defaultIcon;
                 _detail.Title.text = "";
                 _detail.Description.text = "";
                 tab.Selected.SetActive(false);
+
+                // Set info sprites transparent since they are optional
+                foreach (Image img in _detail.Info)
+                {
+                    img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+                }
+
             }
         }
 

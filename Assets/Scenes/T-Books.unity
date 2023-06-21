@@ -1438,7 +1438,7 @@ MonoBehaviour:
   _tabActive: {fileID: 0}
   _selectedTab: {fileID: 1927958310}
   _detail: {fileID: 529409460}
-  _defaultIcon: {fileID: 343899845}
+  _defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &349978096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   _tabActive: {fileID: 0}
   _selectedTab: {fileID: 1989954548}
   _detail: {fileID: 529409460}
-  _defaultIcon: {fileID: 527750568}
+  _defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &529409456
 GameObject:
   m_ObjectHideFlags: 0
@@ -6450,7 +6450,7 @@ MonoBehaviour:
   _tabActive: {fileID: 0}
   _selectedTab: {fileID: 1396468916}
   _detail: {fileID: 529409460}
-  _defaultIcon: {fileID: 1464669991}
+  _defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1474750745
 GameObject:
   m_ObjectHideFlags: 0
