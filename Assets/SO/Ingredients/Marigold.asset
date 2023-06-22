@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Marigold
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Marigold
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: 1a5f1baaa98615640bd6a871be11a3e9, type: 3}
+  info:
+  - {fileID: 21300000, guid: 9aa446b1eb174984ea4055c0aaec7442, type: 3}
+  - {fileID: 21300000, guid: 2712af326c3b6d34d8a1413f73d35041, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

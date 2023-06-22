@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Dandelion
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Dandelion
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: 60ecd4a8241932c4191d4427ff621587, type: 3}
+  info:
+  - {fileID: 21300000, guid: 2ebf888e716bb2b47913ff3055576ec1, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

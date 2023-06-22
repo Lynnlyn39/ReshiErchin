@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Cinnamon
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Cinnamon
   _description: 
   _icon: {fileID: 0}
   info: []

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Elderberry
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Elderberry
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: fa6db77080b705e4babcafd53e9a91d7, type: 3}
+  info:
+  - {fileID: 21300000, guid: 2ae82f5e3a75561429bba1a14a62b92e, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

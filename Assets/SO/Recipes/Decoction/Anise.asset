@@ -15,9 +15,12 @@ MonoBehaviour:
   _name: Decoction Anise
   _description: Mix 2 water vials with 1 anise plant
   _icon: {fileID: 21300000, guid: 1c5316879c1f63748b062c399890b708, type: 3}
-  info: []
+  info:
+  - {fileID: 21300000, guid: a1dd46da0b7764040b395cec69f0819b, type: 3}
+  - {fileID: 21300000, guid: ccc750cbf45020f438c331d74f74955b, type: 3}
+  - {fileID: 21300000, guid: d12b2ea9e4fcfa142affd1a4f57620e3, type: 3}
   _prefab: {fileID: 7618398199485319486, guid: 59ce787fd3090ab40aec53c82380213a, type: 3}
-  isKnown: 0
+  isKnown: 1
   _maxStackSize: 10
   _preparationType: 0
   _ingredients:

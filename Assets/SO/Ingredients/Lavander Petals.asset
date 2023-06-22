@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Lavander Petals
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Lavander Petals
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: 6dd1acc512f2a50449060d0a08eaa774, type: 3}
+  info:
+  - {fileID: 21300000, guid: 310c80c1b4f04964b85dbabe3bae5271, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

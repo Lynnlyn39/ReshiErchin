@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Fennel
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Fennel
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: 6962cfaddd51dc646811d58196878b45, type: 3}
+  info:
+  - {fileID: 21300000, guid: beebe84bc034e07469a64636a96a3c8f, type: 3}
+  - {fileID: 21300000, guid: 71fb2eb6ca796b248ad0887a7ca40ca9, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Gualanday
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Gualanday
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: d350a19b5075e9542bdf50fc73464e50, type: 3}
+  info:
+  - {fileID: 21300000, guid: f00383cd31a12c740990c87f9e04c96d, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

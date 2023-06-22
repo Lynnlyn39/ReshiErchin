@@ -1030,7 +1030,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -29, y: 166}
-  m_SizeDelta: {x: 180, y: 180}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227080035
 MonoBehaviour:
@@ -1045,16 +1045,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8000001, g: 0.854902, b: 0.8078432, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   _tabActive: {fileID: 0}
   _selectedTab: {fileID: 1927958310}
   _detail: {fileID: 529409460}
-  _defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  defaultIcon: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}
 --- !u!1 &349978096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -569, y: 499}
+  m_AnchoredPosition: {x: -569, y: 489}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349978098
@@ -1502,6 +1502,9 @@ MonoBehaviour:
   _objectsToEnable:
   - {fileID: 1464669989}
   _icon: {fileID: 349978098}
+  iconIdle: {fileID: 373023271, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  iconHover: {fileID: 1886949102, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  iconSelected: {fileID: -925600677, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
 --- !u!1001 &391461252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1629,7 +1632,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (11)
+      value: BookSlot (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2126,7 +2129,7 @@ MonoBehaviour:
   _tabActive: {fileID: 0}
   _selectedTab: {fileID: 1989954548}
   _detail: {fileID: 529409460}
-  _defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  defaultIcon: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}
 --- !u!1 &529409456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,7 +2889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -435, y: 510}
+  m_AnchoredPosition: {x: -435, y: 489}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &897870099
@@ -2943,6 +2946,9 @@ MonoBehaviour:
   _objectsToEnable:
   - {fileID: 343899843}
   _icon: {fileID: 897870099}
+  iconIdle: {fileID: -1154061734, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  iconHover: {fileID: 1192044752, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  iconSelected: {fileID: -896237236, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
 --- !u!1001 &911701477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3216,7 +3222,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (4)
+      value: BookSlot (16)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3273,6 +3279,7 @@ RectTransform:
   - {fileID: 349978097}
   - {fileID: 897870098}
   - {fileID: 1357698100}
+  - {fileID: 1254239469}
   m_Father: {fileID: 122819144}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3821,7 +3828,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (1)
+      value: BookSlot (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4798,7 +4805,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (9)
+      value: BookSlot (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4950,7 +4957,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (16)
+      value: BookSlot (15)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4963,6 +4970,82 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1253047096}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1254239468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254239469}
+  - component: {fileID: 1254239471}
+  - component: {fileID: 1254239470}
+  m_Layer: 5
+  m_Name: Choose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1254239469
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254239468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 927045842}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1254239470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254239468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1254239471
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254239468}
+  m_CullTransparentMesh: 1
 --- !u!1 &1256379349
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,7 +5721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: 484}
+  m_AnchoredPosition: {x: -273, y: 478}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357698101
@@ -5695,6 +5778,9 @@ MonoBehaviour:
   _objectsToEnable:
   - {fileID: 527750566}
   _icon: {fileID: 1357698101}
+  iconIdle: {fileID: 147406710, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  iconHover: {fileID: 1911836788, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  iconSelected: {fileID: -282270836, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
 --- !u!1001 &1367286978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5822,7 +5908,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (2)
+      value: BookSlot (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6323,22 +6409,22 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1004423328}
-  - {fileID: 1367286979}
-  - {fileID: 1721101169}
-  - {fileID: 918772659}
   - {fileID: 1692521824}
+  - {fileID: 1004423328}
   - {fileID: 1621819119}
-  - {fileID: 1804034091}
-  - {fileID: 1428224532}
+  - {fileID: 1367286979}
   - {fileID: 1216977117}
+  - {fileID: 1804034091}
   - {fileID: 2051943698}
-  - {fileID: 391461253}
-  - {fileID: 1602770818}
+  - {fileID: 1428224532}
   - {fileID: 1783306188}
+  - {fileID: 391461253}
   - {fileID: 2041743504}
+  - {fileID: 1602770818}
   - {fileID: 1653948437}
+  - {fileID: 1721101169}
   - {fileID: 1253047097}
+  - {fileID: 918772659}
   m_Father: {fileID: 226896110}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6417,9 +6503,9 @@ MonoBehaviour:
   _tabIdle: {fileID: 0}
   _tabHover: {fileID: 0}
   _tabActive: {fileID: 0}
-  _selectedTab: {fileID: 1396468916}
+  _selectedTab: {fileID: 1925917343}
   _detail: {fileID: 529409460}
-  _defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  defaultIcon: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}
 --- !u!1 &1474750745
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,7 +6831,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -7359,7 +7445,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (6)
+      value: BookSlot (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7511,7 +7597,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (15)
+      value: BookSlot (13)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7944,7 +8030,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (5)
+      value: BookSlot (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8266,7 +8352,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (3)
+      value: BookSlot (14)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8722,7 +8808,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (13)
+      value: BookSlot (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8874,7 +8960,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (7)
+      value: BookSlot (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9645,7 +9731,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (14)
+      value: BookSlot (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9797,7 +9883,7 @@ PrefabInstance:
     - target: {fileID: 8539595842561927133, guid: cccdc63f2492afe49945fcc0b11d0f6b,
         type: 3}
       propertyPath: m_Name
-      value: BookSlot (10)
+      value: BookSlot (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

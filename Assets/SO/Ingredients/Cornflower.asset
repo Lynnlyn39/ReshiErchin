@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Cornflower
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Cornflower
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: ffeb931c5d95442448daabd3b586f582, type: 3}
+  info:
+  - {fileID: 21300000, guid: abfa448272c3d7b48bc943191b0f5899, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "ReshiErchin/Recipe")]
-public class Recipe : InventoryItemSO
+public class RecipeSO : InventoryItemSO
 {
     [SerializeField] private PreparationType _preparationType;
     [SerializeField] private List<RecipeIngredient> _ingredients = new List<RecipeIngredient>();

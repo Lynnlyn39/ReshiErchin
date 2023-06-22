@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Ginger
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Ginger
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: be03e80dfda0c784dbf444b2f3461a1b, type: 3}
+  info:
+  - {fileID: 21300000, guid: d1d01f4e4b2dcee4ba2998eb4af66266, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

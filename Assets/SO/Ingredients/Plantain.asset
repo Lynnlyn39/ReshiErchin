@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Plantain
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Plantain
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: 66369cf6809ead442a166c4edb3ecfa9, type: 3}
+  info:
+  - {fileID: 21300000, guid: e64e4e3a448ad3141b3f78c7de20b812, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

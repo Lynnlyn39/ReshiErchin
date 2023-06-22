@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Dill
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Dill
   _description: 
-  _icon: {fileID: 0}
-  info: []
+  _icon: {fileID: 21300000, guid: 07fbb2ddecc43f64da72ce37bab5b90d, type: 3}
+  info:
+  - {fileID: 21300000, guid: 8bc23c5d4ed3c1946aa73582eb6d4a71, type: 3}
   _prefab: {fileID: 0}
   isKnown: 0
   _maxStackSize: 20

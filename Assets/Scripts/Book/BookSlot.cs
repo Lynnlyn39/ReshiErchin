@@ -10,12 +10,10 @@ namespace CustomUI
         private BookSlotGroup _slotGroup;
         [SerializeField] private BookEntry _bookEntry;
         [SerializeField] private TextMeshProUGUI _name;
-        [SerializeField] private GameObject _selected;
-        private bool _isKnown = false;
+        [SerializeField] private GameObject _selected;        
 
         public BookEntry BookEntry { get => _bookEntry; set => _bookEntry = value; }
         public GameObject Selected { get => _selected; set => _selected = value; }
-        public bool IsKnown { get => _isKnown; set => _isKnown = value; }
 
         private void Start()
         {
@@ -24,9 +22,9 @@ namespace CustomUI
             if (_bookEntry)
             {
                 // Remove this when the book is working
-                IsKnown = true;
+                _bookEntry.IsKnown = true;
 
-                if (IsKnown)
+                if (_bookEntry.IsKnown)
                 {
                     if (_bookEntry.Icon && Icon)
                         Icon.sprite = _bookEntry.Icon;

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Reshi's Tears
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Reshi's Tears
   _description: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 4a0e1c8d6b3ab6447814bb2e95cfdfe5, type: 3}
   info: []
   _prefab: {fileID: 0}
   isKnown: 0
