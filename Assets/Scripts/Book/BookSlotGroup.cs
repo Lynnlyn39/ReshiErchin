@@ -43,7 +43,8 @@ namespace CustomUI
                     string desc = $"{so.Description}\n";
                     foreach(RecipeIngredient ing in so.Ingredients)
                     {
-                        desc += $"{ing.Ingredient.Name}: {ing.Quantity}\n"; 
+                        if (ing.Ingredient.Name != null && ing.Quantity != 0)
+                            desc += $"{ing.Ingredient.Name}: {ing.Quantity}\n"; 
                     }
                     _detail.Description.text = desc;
                 }
@@ -67,7 +68,7 @@ namespace CustomUI
 
         public void OnTabEnter(BookSlot tab)
         {
-            Debug.Log("OnTabEnter");
+            //Debug.Log("OnTabEnter");
         }
 
         public override void ResetTabs()
