@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -445,12 +445,12 @@ PrefabInstance:
     - target: {fileID: 4542248428076572561, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.99906015
       objectReference: {fileID: 0}
     - target: {fileID: 4542248428076572561, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 1.0001831
       objectReference: {fileID: 0}
     - target: {fileID: 4542248428076572566, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
@@ -475,17 +475,22 @@ PrefabInstance:
     - target: {fileID: 4542248428465387983, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.9994749
       objectReference: {fileID: 0}
     - target: {fileID: 4542248428465387983, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.00006104261
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542248428532497274, guid: f6fe77535ec9d574e86c1f238a9a483a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4542248428532497285, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -951.49945
+      value: -952.50024
       objectReference: {fileID: 0}
     - target: {fileID: 4542248428532497285, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
@@ -657,11 +662,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6644384778581813437, guid: f6fe77535ec9d574e86c1f238a9a483a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7095097541173611074, guid: f6fe77535ec9d574e86c1f238a9a483a,
         type: 3}
       propertyPath: _loader
       value: 
       objectReference: {fileID: 1023744364}
+    - target: {fileID: 8968820090908077951, guid: f6fe77535ec9d574e86c1f238a9a483a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
