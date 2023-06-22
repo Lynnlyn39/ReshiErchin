@@ -7,13 +7,14 @@ public class Pestle : MonoBehaviour
 {
     [SerializeField] private int _maxIngredients;
     [SerializeField] private Transform[] _dropPoints;
-    [SerializeField] private UnityEngine.UI.Button _mixButton;
+    [SerializeField] private UnityEngine.UI.Button[] _mixButtons;
     [SerializeField] private Image _progressBar;
     [SerializeField] private GameObject _progressBarGameObject;
     
     private List<InventoryItem> _ingredients;
     private Inventory _inventory;
     private int _nextDropPointIndex = 0;
+    private RecipeSO[] _recipes;
 
     public Vector3 DropPoint => _dropPoints[_nextDropPointIndex++ % _dropPoints.Length].position;
 
@@ -22,12 +23,21 @@ public class Pestle : MonoBehaviour
 
     public bool IsFull => _ingredients.Count == MaxIngredients;
 
+    
+
     private void Awake()
     {
         _ingredients = new List<InventoryItem>();
         _inventory = FindObjectOfType<Inventory>();
-        _mixButton.interactable = false;
+        EnableMix(false);
         _progressBarGameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        _recipes = FindObjectsByType<RecipeSO>(FindObjectsSortMode.None);
+        foreach (RecipeSO recipe in _recipes)
+            Debug.Log($"Recipe added: {recipe.Name}");
     }
 
     public void AddIngredient(InventoryItem ingredient)
@@ -35,8 +45,7 @@ public class Pestle : MonoBehaviour
         if (Ingredients.Count < MaxIngredients)
         {
             _ingredients.Add(ingredient);
-            if (!_mixButton.interactable)
-                _mixButton.interactable = true;
+            EnableMix(true);
         }
     }
 
@@ -49,7 +58,7 @@ public class Pestle : MonoBehaviour
             Destroy(item, 1f);
         }
         _ingredients.Clear();
-        _mixButton.interactable = false;        
+        EnableMix(false);
     }
 
     private void ConsumeIngredients()
@@ -62,13 +71,49 @@ public class Pestle : MonoBehaviour
         _ingredients.Clear();
     }
 
-    public void MixIngredients()
+    private void EnableMix(bool enabled)
     {
-        _mixButton.interactable = false;
-        StartCoroutine(MixCoroutine());
+        foreach (UnityEngine.UI.Button but in _mixButtons)
+            but.interactable = enabled;
+    }    
+
+    public void PrepareInfusion()
+    {
+        MixIngredients(PreparationType.INFUSION);
+    }
+    public void PrepareDecoction()
+    {
+        MixIngredients(PreparationType.DECOCTION);
     }
 
-    IEnumerator MixCoroutine()
+    public void PrepareCompress()
+    {
+        MixIngredients(PreparationType.COMPRESS);
+    }
+    public void PrepareCream()
+    {
+        MixIngredients(PreparationType.CREAM);
+    }
+    public void PrepareLeaves()
+    {
+        MixIngredients(PreparationType.LEAVES);
+    }
+    public void PreparePotion()
+    {
+        MixIngredients(PreparationType.POTION);
+    }
+    public void PreparePoultice()
+    {
+        MixIngredients(PreparationType.POULTICE);
+    }
+
+    public void MixIngredients(PreparationType preparationType)
+    {
+        EnableMix(false);
+        StartCoroutine(MixCoroutine(preparationType));
+    }
+
+    IEnumerator MixCoroutine(PreparationType preparationType)
     {
         _progressBarGameObject.SetActive(true);
         float duration = 5f;
@@ -88,7 +133,25 @@ public class Pestle : MonoBehaviour
         ConsumeIngredients();
 
         // If it is a valid recipe, instantiate object
-        // TO-DO
+        RecipeSO result = ValidateRecipe(preparationType);
     }
+
+    private RecipeSO ValidateRecipe(PreparationType preparationType)
+    {        
+        RecipeSO result = null;
+        foreach(RecipeSO recipe in _recipes)
+        {
+            foreach(RecipeIngredient ing in recipe.Ingredients)
+            {
+                if (ing.Match(Ingredients) && recipe.PreparationType.Equals(preparationType))
+                {
+                    result = recipe;
+                    break;
+                }
+            }                
+        }
+        return result;
+    }
+
 
 }
