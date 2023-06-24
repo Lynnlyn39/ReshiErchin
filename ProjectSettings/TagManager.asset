@@ -6,11 +6,12 @@ TagManager:
   tags:
   - UI
   - LevelLoader
+  - Terrain
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Terrain
   - Water
   - UI
   - Interactable
