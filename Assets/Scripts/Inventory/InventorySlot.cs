@@ -1,17 +1,19 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class InventorySlot : MonoBehaviour
 {    
-    [SerializeField] private InventoryItemSO _itemData;
+    [SerializeField] private InventoryItemSO _data;
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _stackText;
-
+    [SerializeField] private Canvas _canvas;
     private GameObject _instancedItem;
 
-    private int _stack = 0;
 
-    public InventoryItemSO ItemData { get => _itemData; set => _itemData = value; }
+    [SerializeField] private int _stack = 0;
+
+    public InventoryItemSO Data { get => _data; set => _data = value; }
     public int Stack
     {
         get => _stack;
@@ -19,29 +21,28 @@ public class InventorySlot : MonoBehaviour
         {
             _stack = value;
             _stackText.text = $"({_stack})";
+            UpdateSlot();
         }
     }
 
     private void Start()
     {
-        _nameText.text = ItemData.Name;
-        _nameText.gameObject.SetActive(false);
-        _stackText.gameObject.SetActive(false);
+        Stack = 0;
+        UpdateSlot();
     }
 
     public bool AddItem()
     {
         bool result = false;
-        if (Stack < ItemData.MaxStackSize)
+        if (Stack < Data.MaxStackSize)
         {
-            if (Stack == 0)
-            {
-                _instancedItem = Instantiate(_itemData.Prefab, transform);
-                _nameText.gameObject.SetActive(true);
-                _stackText.gameObject.SetActive(true);
-                ItemData.IsKnown = true;
+            Stack++;
+            if (Stack == 1)
+            {                
+                Data.IsKnown = true;
+                ShowSlot();
             }
-            Stack++;    
+            result = true;
         } 
         else
         {
@@ -59,8 +60,58 @@ public class InventorySlot : MonoBehaviour
 
         if (Stack == 0)
         {
-            Destroy(_instancedItem);
+            HideSlot();
         }
         return true;
+    }
+
+    private void UpdateSlot()
+    {
+        if (Data)
+        {
+            _nameText.text = Data.Name;
+            if (!_instancedItem && _data.Prefab)
+            {
+                _instancedItem = Instantiate(_data.Prefab, transform);
+            } else
+            {
+                Debug.LogWarning($"No prefab set in ItemData (InventoryItemSO) {_data.Name}");
+            }
+        } else
+        {
+            Debug.LogWarning($"No ItemData set in slot {name}");
+        }
+
+        if (Stack == 0 || Data == null)
+        {
+            HideSlot();
+        } else
+        {
+            ShowSlot();
+        }
+    }
+
+    private void HideSlot()
+    {
+        if (_instancedItem)
+        {
+            _instancedItem.SetActive(false);
+        }
+        if (_canvas)
+        {
+            _canvas.gameObject.SetActive(false);
+        }        
+    }
+
+    private void ShowSlot()
+    {
+        if (_instancedItem)
+        {
+            _instancedItem.SetActive(true);
+        }
+        if (_canvas)
+        {
+            _canvas.gameObject.SetActive(true);
+        }
     }
 }

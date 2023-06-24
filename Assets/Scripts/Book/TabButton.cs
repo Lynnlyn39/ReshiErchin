@@ -10,15 +10,15 @@ namespace CustomUI
         [SerializeField] protected TabGroup _tabGroup;
         [SerializeField] protected List<GameObject> _objectsToEnable;        
         [SerializeField] protected Image _icon;
-        [SerializeField] private Sprite iconIdle;
-        [SerializeField] private Sprite iconHover;
-        [SerializeField] private Sprite iconSelected;
+        [SerializeField] private Sprite _iconIdle;
+        [SerializeField] private Sprite _iconHover;
+        [SerializeField] private Sprite _iconSelected;
 
         public Image Icon { get => _icon; set => _icon = value; }
         public List<GameObject> ObjectsToEnable { get => _objectsToEnable; set => _objectsToEnable = value; }
-        public Sprite IconIdle { get => iconIdle; set => iconIdle = value; }
-        public Sprite IconHover { get => iconHover; set => iconHover = value; }
-        public Sprite IconSelected { get => iconSelected; set => iconSelected = value; }
+        public Sprite IconIdle { get => _iconIdle; set => _iconIdle = value; }
+        public Sprite IconHover { get => _iconHover; set => _iconHover = value; }
+        public Sprite IconSelected { get => _iconSelected; set => _iconSelected = value; }
 
         private void Start()
         {

@@ -24,9 +24,15 @@ public class Inventory : MonoBehaviour
 
         foreach (InventorySlot slot in slots)
         {
-            if (_inventorySlots.TryAdd(slot.ItemData, slot))
+            if (slot.Data)
             {
-                Debug.Log($"{slot.ItemData.Name} SLOT added to Inventory.");
+                if (_inventorySlots.TryAdd(slot.Data, slot))
+                {
+                    Debug.Log($"{slot.Data.Name} SLOT added to Inventory.");
+                }
+            } else
+            {
+                Debug.LogWarning($"Inventory slot: {slot.name} is missing an InventoryItemSO reference.");
             }
         }
         _inventoryActionAsset = new IA_ThirdPersonController();

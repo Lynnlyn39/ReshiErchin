@@ -563,3 +563,5 @@ MonoBehaviour:
   _itemData: {fileID: 0}
   _nameText: {fileID: 7161138915882099439}
   _stackText: {fileID: 7136858078939330063}
+  _canvas: {fileID: 1457769361223905785}
+  _stack: 0
