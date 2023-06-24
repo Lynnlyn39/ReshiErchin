@@ -7,6 +7,7 @@ TagManager:
   - UI
   - LevelLoader
   - Terrain
+  - Herbs
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - Herbs to collect
   - 
   - 
   - 
