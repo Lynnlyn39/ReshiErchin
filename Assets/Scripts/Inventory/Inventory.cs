@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -50,6 +49,11 @@ public class Inventory : MonoBehaviour
         _inventoryActionAsset.Inventory.Disable();
     }
 
+    /// <summary>
+    /// Add one item to the inventory
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
     public bool AddItem(InventoryItemSO item)
     {
         InventorySlot slot;        
@@ -62,6 +66,11 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Remove one item from the inventory. Used when it is moved to the pestle mix
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
     public bool RemoveItem(InventoryItem item)
     {
         InventorySlot slot;
@@ -78,6 +87,9 @@ public class Inventory : MonoBehaviour
         AddToMix();
     }
 
+    /// <summary>
+    /// Move one ingredient from the inventory to the pestle
+    /// </summary>
     public void AddToMix()
     {
         RaycastHit hit;
@@ -96,16 +108,13 @@ public class Inventory : MonoBehaviour
                 } else
                 {
                     item.Slot.RemoveItem();
-                    StartCoroutine(MoveToMix(item));
-                    Debug.Log($"AddToMix");
+                    StartCoroutine(MoveToMix(item));                    
                 }               
             } else
             {
                 Debug.Log($"Not an InventoryItem");
-            }
-            
+            }            
         }
-
     }
 
     private void OnResetMix(InputAction.CallbackContext context)
