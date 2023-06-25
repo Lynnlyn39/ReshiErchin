@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1435166947707373975}
   - component: {fileID: 4084165851002965178}
   m_Layer: 0
-  m_Name: P_PROP_towel_interior_02
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 15.995001, z: 0}
 --- !u!33 &7143524816715623949
 MeshFilter:

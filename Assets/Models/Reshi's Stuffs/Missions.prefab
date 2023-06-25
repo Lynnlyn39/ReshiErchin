@@ -8,10 +8,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1435166947707373975, guid: 68b6393cbe051e74b903f2ca7ea3aeaf,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435166947707373975, guid: 68b6393cbe051e74b903f2ca7ea3aeaf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a769ab79514097442b5dec56fd6d68b5, type: 2}
     - target: {fileID: 3739718938042633552, guid: 68b6393cbe051e74b903f2ca7ea3aeaf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3739718938042633552, guid: 68b6393cbe051e74b903f2ca7ea3aeaf,
         type: 3}
@@ -81,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 6868906020951693247, guid: 68b6393cbe051e74b903f2ca7ea3aeaf,
         type: 3}
       propertyPath: m_Name
-      value: P_PROP_towel_interior_02 Variant
+      value: Missions
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
