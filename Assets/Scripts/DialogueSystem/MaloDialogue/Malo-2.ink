@@ -1,8 +1,9 @@
 You wanted something?
-->My_Choices
-    ==My_Choices==
+    ->My_Choices
+
+==My_Choices==
     * [Talk.] ->Talk
-    * [Nevermind, see you arround.] ->END
+    * [Nevermind, see you arround.] ->Nevermind
     
     ==Talk==
         Malo : Get the hell out of here, you rascal. And remember to tell…
@@ -10,3 +11,7 @@ You wanted something?
         Malo : …
         Reshi : Okay, okay. Old man, I can't even joke with you anymore.
         -> END
+        
+    == Nevermind ==
+        Malo: Goodbye.
+        ->END
