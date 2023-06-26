@@ -13,6 +13,7 @@ public class ThirdPersonController : MonoBehaviour
     private IA_ThirdPersonController _playerActionAsset;
     private CharacterController _characterController;
     private Animator _animator;
+    public CameraManager cameraManager;
 
     int isWalkingHash;
     int isRunningHash;
@@ -28,12 +29,6 @@ public class ThirdPersonController : MonoBehaviour
 
     private Interactor _interactor;
 
-    //movement fields
-    
-    //[SerializeField] private float _speed = 1f;
-    //[SerializeField] private float _trunSmoothTime = 0.1f;
-    //private float _turnSmoothVelocity;
-
     [SerializeField] private Camera playerCamera;
 
     void Awake()
@@ -48,6 +43,9 @@ public class ThirdPersonController : MonoBehaviour
         _playerActionAsset.Player.Move.started += OnMovementInput;
         _playerActionAsset.Player.Move.canceled += OnMovementInput;
         _playerActionAsset.Player.Move.performed += OnMovementInput;
+        _playerActionAsset.Player.Interact.performed += Interact;
+
+        _playerActionAsset.Player.Inventory.performed += OnInventoryInput;
 
         _playerActionAsset.Player.Run.started += OnRun;
         _playerActionAsset.Player.Run.canceled += OnRun;
@@ -56,6 +54,10 @@ public class ThirdPersonController : MonoBehaviour
     }
     void OnMovementInput (InputAction.CallbackContext context)
     {
+        if(DialogueManager.instance.dialogueIsPlaying)
+        {
+            return;
+        }
         _currentMovementInput = context.ReadValue<Vector2>();
 
         _currentMovement.x = _currentMovementInput.x;
@@ -71,7 +73,15 @@ public class ThirdPersonController : MonoBehaviour
         _isRunPressed = context.ReadValueAsButton();
     }
     
+    private void OnInventoryInput(InputAction.CallbackContext context)
+    {
+        cameraManager.ActivateInventoryCamera();
+        
+        _playerActionAsset.Player.Disable();
+        _playerActionAsset.Inventory.Enable();
 
+        
+    }
     private void Interact(InputAction.CallbackContext context)
     {
         if (_interactor.canInteract)
@@ -163,7 +173,6 @@ public class ThirdPersonController : MonoBehaviour
     {
         _playerActionAsset.Player.Enable();
 
-        _playerActionAsset.Player.Interact.performed += Interact;
     }
     private void OnDisable()
     {

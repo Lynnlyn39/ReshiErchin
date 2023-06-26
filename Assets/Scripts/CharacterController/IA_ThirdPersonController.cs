@@ -62,6 +62,24 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""9f8436ff-ddde-402f-bafe-799e8705a952"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Submit"",
+                    ""type"": ""Button"",
+                    ""id"": ""85c58e22-91d8-4dd1-b20c-bfc2a46b5976"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,7 +152,7 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                 {
                     ""name"": """",
                     ""id"": ""4a92c3a5-7f00-494d-b668-992dd0437264"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -145,7 +163,7 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                 {
                     ""name"": """",
                     ""id"": ""93497e8e-51d9-4739-95bd-5208dfb26cbd"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -196,6 +214,50 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""action"": ""Run"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf5ad7e1-9d34-4d6c-96fd-ef823dab900e"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13df91ad-fe2d-47a8-a323-cef93df5efd7"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c47a6547-1efb-4df3-9feb-6bb4d4dc47c7"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c696a3c7-45c2-4c84-9ff0-fb4e6e0cc1ad"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -216,6 +278,15 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""name"": ""ResetMix"",
                     ""type"": ""Button"",
                     ""id"": ""ba5ff7c3-0738-4bec-aa8a-04333863bafe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReturnToPlayer"",
+                    ""type"": ""Button"",
+                    ""id"": ""41fc1327-706f-486b-b4c5-05d050c5a675"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -266,6 +337,28 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""action"": ""ResetMix"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c07f8bb-272a-4e2a-a11a-d2916e0b225a"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ReturnToPlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4134c21-5ea4-4708-819a-57f9cf2c21db"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReturnToPlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -306,10 +399,13 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
+        m_Player_Submit = m_Player.FindAction("Submit", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_AddToMix = m_Inventory.FindAction("AddToMix", throwIfNotFound: true);
         m_Inventory_ResetMix = m_Inventory.FindAction("ResetMix", throwIfNotFound: true);
+        m_Inventory_ReturnToPlayer = m_Inventory.FindAction("ReturnToPlayer", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -375,6 +471,8 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_Inventory;
+    private readonly InputAction m_Player_Submit;
     public struct PlayerActions
     {
         private @IA_ThirdPersonController m_Wrapper;
@@ -383,6 +481,8 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+        public InputAction @Submit => m_Wrapper.m_Player_Submit;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -404,6 +504,12 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
+            @Submit.started += instance.OnSubmit;
+            @Submit.performed += instance.OnSubmit;
+            @Submit.canceled += instance.OnSubmit;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -420,6 +526,12 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
+            @Submit.started -= instance.OnSubmit;
+            @Submit.performed -= instance.OnSubmit;
+            @Submit.canceled -= instance.OnSubmit;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -443,12 +555,14 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
     private List<IInventoryActions> m_InventoryActionsCallbackInterfaces = new List<IInventoryActions>();
     private readonly InputAction m_Inventory_AddToMix;
     private readonly InputAction m_Inventory_ResetMix;
+    private readonly InputAction m_Inventory_ReturnToPlayer;
     public struct InventoryActions
     {
         private @IA_ThirdPersonController m_Wrapper;
         public InventoryActions(@IA_ThirdPersonController wrapper) { m_Wrapper = wrapper; }
         public InputAction @AddToMix => m_Wrapper.m_Inventory_AddToMix;
         public InputAction @ResetMix => m_Wrapper.m_Inventory_ResetMix;
+        public InputAction @ReturnToPlayer => m_Wrapper.m_Inventory_ReturnToPlayer;
         public InputActionMap Get() { return m_Wrapper.m_Inventory; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -464,6 +578,9 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @ResetMix.started += instance.OnResetMix;
             @ResetMix.performed += instance.OnResetMix;
             @ResetMix.canceled += instance.OnResetMix;
+            @ReturnToPlayer.started += instance.OnReturnToPlayer;
+            @ReturnToPlayer.performed += instance.OnReturnToPlayer;
+            @ReturnToPlayer.canceled += instance.OnReturnToPlayer;
         }
 
         private void UnregisterCallbacks(IInventoryActions instance)
@@ -474,6 +591,9 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @ResetMix.started -= instance.OnResetMix;
             @ResetMix.performed -= instance.OnResetMix;
             @ResetMix.canceled -= instance.OnResetMix;
+            @ReturnToPlayer.started -= instance.OnReturnToPlayer;
+            @ReturnToPlayer.performed -= instance.OnReturnToPlayer;
+            @ReturnToPlayer.canceled -= instance.OnReturnToPlayer;
         }
 
         public void RemoveCallbacks(IInventoryActions instance)
@@ -515,10 +635,13 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         void OnRun(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
+        void OnSubmit(InputAction.CallbackContext context);
     }
     public interface IInventoryActions
     {
         void OnAddToMix(InputAction.CallbackContext context);
         void OnResetMix(InputAction.CallbackContext context);
+        void OnReturnToPlayer(InputAction.CallbackContext context);
     }
 }

@@ -41,6 +41,7 @@ public class Inventory : MonoBehaviour
     {
         _inventoryActionAsset.Inventory.AddToMix.performed += OnAddToMix;
         _inventoryActionAsset.Inventory.ResetMix.performed += OnResetMix;
+        _inventoryActionAsset.Inventory.ReturnToPlayer.performed += OnReturnToPlayer;
         _inventoryActionAsset.Inventory.Enable();
     }
 
@@ -144,4 +145,12 @@ public class Inventory : MonoBehaviour
         item.transform.position = endPosition;        
     }    
 
+    private void OnReturnToPlayer(InputAction.CallbackContext context)
+    {
+        GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>().ActivatePlayerCamera();
+
+        _inventoryActionAsset.Player.Enable();
+        _inventoryActionAsset.Inventory.Disable();
+        
+    }
 }
