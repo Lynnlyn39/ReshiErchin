@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Dill
   m_EditorClassIdentifier: 
   _name: Infusion Dill
-  _description: 
+  _description: 'Description: To reduce stomach and intestinal gas. Take one cup
+    3 times a day while you have symptoms. Precautions: it can make the skin very
+    sensitive to the sun rays, so it is sun rays, and therefore it is recommended
+    to use sunscreen when consuming. Ingredients: 2 cup of Water 3 Dill'
   _icon: {fileID: 0}
   info: []
   _prefab: {fileID: 7919492326964204990, guid: 1ad2eb895ad54824083f78552ed7306a, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 1
   _ingredients:

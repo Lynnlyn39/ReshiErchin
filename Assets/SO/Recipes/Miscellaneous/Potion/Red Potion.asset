@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Red Potion
   m_EditorClassIdentifier: 
   _name: Red Potion
-  _description: 
+  _description: 'Desciption: A concoction used to restore Reshi''s health. It can
+    only have a maximum of 4 charges (two default, and two using the "Blue Potion").
+    Ingredients:  1 Blue Potion 1 Reshi''s Blood '
   _icon: {fileID: 0}
   info: []
   _prefab: {fileID: 3904257780681097376, guid: d2d62d0f3f9ced04cbde43da90c2280b, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 6
   _ingredients:

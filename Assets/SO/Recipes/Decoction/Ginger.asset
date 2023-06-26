@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Ginger
   m_EditorClassIdentifier: 
   _name: Decoction Ginger
-  _description: 2 of water and 3 of ginger
+  _description: 'Description: To prevent the formation of blood clots.And also to
+    increase energy.Take one cup 1 to 3 times a day, 3 days a week. Precautions:
+    Pregnant women should consume in moderation. Those who are breastfeeding, children
+    under two years old and people with gastritis or suffering from digestive ulcers
+    should refrain from using it. Ingredients: 2 cup of Water 3 Ginger'
   _icon: {fileID: 21300000, guid: cbe313f7e2a3eac42bf0ebf176f111ca, type: 3}
   info: []
   _prefab: {fileID: 4002786901669572159, guid: adb5278f20edb7a479557ae5cc3993ba, type: 3}
   isKnown: 1
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 0
   _ingredients:

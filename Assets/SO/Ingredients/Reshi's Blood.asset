@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Reshi's Blood
   m_EditorClassIdentifier: 
   _name: Reshi's Blood
-  _description: 
+  _description: A flask of glass that contains Reshi's blood.
   _icon: {fileID: 21300000, guid: d6dd39653fc63fd4889386a731fbf8a6, type: 3}
-  info: []
+  info:
+  - {fileID: 21300000, guid: d6dd39653fc63fd4889386a731fbf8a6, type: 3}
   _prefab: {fileID: 2469306007472036884, guid: f6b784f0cd0d46a439d198c7707de815, type: 3}
   isKnown: 1
+  _unlimited: 0
   _maxStackSize: 99

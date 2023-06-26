@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Blue Potion
   m_EditorClassIdentifier: 
   _name: Blue Potion
-  _description: 
+  _description: 'Ingredients:  1 Infusion Elderberry 1 Decoction Ginger Reshi''s
+    Tears '
   _icon: {fileID: 21300000, guid: de9fd4d616a30e546b6aad3c13be1fe0, type: 3}
   info:
   - {fileID: 21300000, guid: 85be783cf9ad1234582df5b086d1adde, type: 3}
   _prefab: {fileID: 5605509334946222767, guid: da6edbae5df18164c9a151abd4b22adc, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 6
   _ingredients:

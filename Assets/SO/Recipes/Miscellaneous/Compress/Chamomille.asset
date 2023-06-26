@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Chamomille
   m_EditorClassIdentifier: 
   _name: Compress Chamomille
-  _description: 
+  _description: "Description: To relieve digestive colic. Wet a cloth \u01A5na in
+    this infusion, put on the affected area and tie. In children, place the compress
+    on the belly. Apply as long as you have symptoms. Precautions: If you notice
+    any allergic reaction, refrain from further use. Ingredients: 2 cup of Water
+    2 Chamomille\t"
   _icon: {fileID: 0}
   info: []
   _prefab: {fileID: 3544246039359653967, guid: ea1a434c75946ca49a78c6db430a4883, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 4
   _ingredients:

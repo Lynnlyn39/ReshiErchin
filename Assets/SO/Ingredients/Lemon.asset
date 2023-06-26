@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Lemon
   m_EditorClassIdentifier: 
   _name: Lemon
-  _description: 
+  _description: 'Description: Lemon is a natural body cleanser and vitalizer.'
   _icon: {fileID: 21300000, guid: 1a3e7aa48747f154ab33f47270f3f412, type: 3}
   info: []
   _prefab: {fileID: 7690419782156585768, guid: 550a32c99fdf3284b977e5af9f10a080, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 20

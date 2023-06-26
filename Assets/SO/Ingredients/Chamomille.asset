@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e7143730805c45b2a471c5f736651, type: 3}
   m_Name: Chamomille
   m_EditorClassIdentifier: 
-  _name: Camomille
-  _description: 
+  _name: Chamomille
+  _description: 'Description: Chamomile serves as a nerve relaxant and relieves digestive
+    disorders. Its leaves are very divided and aromatic, in the form of needles.  
+    Precaution: People allergic to this plant allergic to this plant should abstain
+    from consuming it. '
   _icon: {fileID: 21300000, guid: 1c6dc138dd3a1714e91c5a180316a3ca, type: 3}
   info:
   - {fileID: 21300000, guid: 3c89b269722f25d41aef9d5c4d92661c, type: 3}
+  - {fileID: 21300000, guid: 3c89b269722f25d41aef9d5c4d92661c, type: 3}
   _prefab: {fileID: 1224902824390391345, guid: c86f4d66b4f4f2647a5213f785b87039, type: 3}
   isKnown: 1
+  _unlimited: 0
   _maxStackSize: 20

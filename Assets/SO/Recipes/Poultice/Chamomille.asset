@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Chamomille
   m_EditorClassIdentifier: 
   _name: Poultice Chamomille
-  _description: 
+  _description: 'Description: To alleviate skin allergies in children. children.
+    Apply the preparation directly on the affected area. Ingredients: 2 cup of Water 
+    2 Chamomille'
   _icon: {fileID: 0}
   info: []
   _prefab: {fileID: 975645848654348800, guid: fe2e2e553ea73d64e8c3dc8c22119f12, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 2
   _ingredients:

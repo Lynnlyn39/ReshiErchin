@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Horehound
   m_EditorClassIdentifier: 
   _name: Poultice Horehound
-  _description: 
+  _description: 'For throat irritation. Take it once a day for as long as you have
+    symptoms.symptoms.  Precautions: pregnant women should consume ginger in moderation.
+    Those who are in breast-feeding, children under two years of age, and people
+    with gastritis, gastritis and people with gastritis, or who suffer from digestive
+    ulcers, should refrain from ulcers, should refrain from using ginger. Ingredients:
+    2 cup of Water 6 Horehound'
   _icon: {fileID: 0}
   info: []
   _prefab: {fileID: 1253292472067653602, guid: 3baafa9128c4659428b2f1d6da09556b, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 2
   _ingredients:

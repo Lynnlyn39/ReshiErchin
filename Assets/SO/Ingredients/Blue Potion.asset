@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Blue Potion
   m_EditorClassIdentifier: 
   _name: Blue Potion
-  _description: 
+  _description: 'Description: A concoction used to double an ingredient. It has a
+    cooldown of 1.5 minutes.  It is also used as a recharge for "Red Potion"; this
+    action can only be done twice before saving.  '
   _icon: {fileID: 21300000, guid: de9fd4d616a30e546b6aad3c13be1fe0, type: 3}
   info: []
   _prefab: {fileID: 5585794253942492942, guid: 8f92bc5b912ccc34bb3762aea5912ec7, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 20

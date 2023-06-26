@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Ginger
   m_EditorClassIdentifier: 
   _name: Infusion Ginger
-  _description: 
+  _description: 'Description: For throat irritation. Take a cup 2 times a day while
+    you have symptoms.  Precautions: pregnant women should consume ginger in moderation.
+    Those who are in breastfeeding, children under two years of age and people with
+    gastritis and people with gastritis, or who suffer from digestive ulcers, should
+    refrain from ulcers, should abstain from using ginger. Ingredients: 2 cup of
+    Water 1 Ginger 1 Lemon'
   _icon: {fileID: 0}
   info: []
   _prefab: {fileID: 7055425988313603546, guid: c9026e1ef9c548d40b6158c3658a2ed9, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 10
   _preparationType: 1
   _ingredients:

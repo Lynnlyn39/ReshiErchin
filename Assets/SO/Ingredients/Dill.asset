@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Dill
   m_EditorClassIdentifier: 
   _name: Dill
-  _description: 
+  _description: 'Description: Dill serves as a soothing agent and helps to eliminate
+    fungi and bacteria from the skin. It differs from fennel because it has a thinner
+    stem base.  Precaution: It can make the skin very sensitive to the sun rays.
+    It is therefore recommended to use sunscreen for the duration of the treatment. '
   _icon: {fileID: 21300000, guid: 07fbb2ddecc43f64da72ce37bab5b90d, type: 3}
   info:
   - {fileID: 21300000, guid: 8bc23c5d4ed3c1946aa73582eb6d4a71, type: 3}
   _prefab: {fileID: 3216907102882189359, guid: 9be9068f4b43f014398d675ad365b45c, type: 3}
   isKnown: 0
+  _unlimited: 0
   _maxStackSize: 20
