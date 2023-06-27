@@ -80,6 +80,15 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenBook"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd161405-5655-46d2-bde5-0cb77762c1c5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -258,6 +267,28 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e09416ba-6e37-44d8-973e-9636f5c7c890"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""OpenBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6dfe0888-4afb-4cd8-97c5-50b0253b30d2"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""OpenBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -361,6 +392,87 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Book"",
+            ""id"": ""e707658d-5f2b-4b8e-b1fd-800c52ed9c8a"",
+            ""actions"": [
+                {
+                    ""name"": ""CloseBook"",
+                    ""type"": ""Button"",
+                    ""id"": ""03af88ec-387b-47ca-ad78-ddb75f1aa81e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PointerClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2746dfd-528d-43ce-99ac-5611240e2109"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a51562a3-2246-4449-bb72-77f32b48f99d"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""CloseBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""82804fe5-fd5a-4183-bed3-b29acdd3eeee"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""CloseBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""45ee9c3f-8137-4529-9f7e-e79fbfcb6ffd"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""CloseBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8bfd51a1-f784-4555-9610-9d2279db6370"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""PointerClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""80c746d0-749a-4b04-ae20-4e8bab29d350"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PointerClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -401,11 +513,16 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
         m_Player_Submit = m_Player.FindAction("Submit", throwIfNotFound: true);
+        m_Player_OpenBook = m_Player.FindAction("OpenBook", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_AddToMix = m_Inventory.FindAction("AddToMix", throwIfNotFound: true);
         m_Inventory_ResetMix = m_Inventory.FindAction("ResetMix", throwIfNotFound: true);
         m_Inventory_ReturnToPlayer = m_Inventory.FindAction("ReturnToPlayer", throwIfNotFound: true);
+        // Book
+        m_Book = asset.FindActionMap("Book", throwIfNotFound: true);
+        m_Book_CloseBook = m_Book.FindAction("CloseBook", throwIfNotFound: true);
+        m_Book_PointerClick = m_Book.FindAction("PointerClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -473,6 +590,7 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Inventory;
     private readonly InputAction m_Player_Submit;
+    private readonly InputAction m_Player_OpenBook;
     public struct PlayerActions
     {
         private @IA_ThirdPersonController m_Wrapper;
@@ -483,6 +601,7 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
         public InputAction @Submit => m_Wrapper.m_Player_Submit;
+        public InputAction @OpenBook => m_Wrapper.m_Player_OpenBook;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -510,6 +629,9 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @Submit.started += instance.OnSubmit;
             @Submit.performed += instance.OnSubmit;
             @Submit.canceled += instance.OnSubmit;
+            @OpenBook.started += instance.OnOpenBook;
+            @OpenBook.performed += instance.OnOpenBook;
+            @OpenBook.canceled += instance.OnOpenBook;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -532,6 +654,9 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @Submit.started -= instance.OnSubmit;
             @Submit.performed -= instance.OnSubmit;
             @Submit.canceled -= instance.OnSubmit;
+            @OpenBook.started -= instance.OnOpenBook;
+            @OpenBook.performed -= instance.OnOpenBook;
+            @OpenBook.canceled -= instance.OnOpenBook;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -611,6 +736,60 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         }
     }
     public InventoryActions @Inventory => new InventoryActions(this);
+
+    // Book
+    private readonly InputActionMap m_Book;
+    private List<IBookActions> m_BookActionsCallbackInterfaces = new List<IBookActions>();
+    private readonly InputAction m_Book_CloseBook;
+    private readonly InputAction m_Book_PointerClick;
+    public struct BookActions
+    {
+        private @IA_ThirdPersonController m_Wrapper;
+        public BookActions(@IA_ThirdPersonController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CloseBook => m_Wrapper.m_Book_CloseBook;
+        public InputAction @PointerClick => m_Wrapper.m_Book_PointerClick;
+        public InputActionMap Get() { return m_Wrapper.m_Book; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(BookActions set) { return set.Get(); }
+        public void AddCallbacks(IBookActions instance)
+        {
+            if (instance == null || m_Wrapper.m_BookActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BookActionsCallbackInterfaces.Add(instance);
+            @CloseBook.started += instance.OnCloseBook;
+            @CloseBook.performed += instance.OnCloseBook;
+            @CloseBook.canceled += instance.OnCloseBook;
+            @PointerClick.started += instance.OnPointerClick;
+            @PointerClick.performed += instance.OnPointerClick;
+            @PointerClick.canceled += instance.OnPointerClick;
+        }
+
+        private void UnregisterCallbacks(IBookActions instance)
+        {
+            @CloseBook.started -= instance.OnCloseBook;
+            @CloseBook.performed -= instance.OnCloseBook;
+            @CloseBook.canceled -= instance.OnCloseBook;
+            @PointerClick.started -= instance.OnPointerClick;
+            @PointerClick.performed -= instance.OnPointerClick;
+            @PointerClick.canceled -= instance.OnPointerClick;
+        }
+
+        public void RemoveCallbacks(IBookActions instance)
+        {
+            if (m_Wrapper.m_BookActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IBookActions instance)
+        {
+            foreach (var item in m_Wrapper.m_BookActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_BookActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public BookActions @Book => new BookActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -637,11 +816,17 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         void OnInteract(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
+        void OnOpenBook(InputAction.CallbackContext context);
     }
     public interface IInventoryActions
     {
         void OnAddToMix(InputAction.CallbackContext context);
         void OnResetMix(InputAction.CallbackContext context);
         void OnReturnToPlayer(InputAction.CallbackContext context);
+    }
+    public interface IBookActions
+    {
+        void OnCloseBook(InputAction.CallbackContext context);
+        void OnPointerClick(InputAction.CallbackContext context);
     }
 }

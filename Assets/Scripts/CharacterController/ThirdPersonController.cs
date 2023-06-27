@@ -9,6 +9,9 @@ using UnityEngine.UIElements;
 
 public class ThirdPersonController : MonoBehaviour
 {
+    [SerializeField] GameObject _inventory;
+    [SerializeField] GameObject _book;
+
     //Input fields
     private IA_ThirdPersonController _playerActionAsset;
     private CharacterController _characterController;
@@ -46,6 +49,7 @@ public class ThirdPersonController : MonoBehaviour
         _playerActionAsset.Player.Interact.performed += Interact;
 
         _playerActionAsset.Player.Inventory.performed += OnInventoryInput;
+        _playerActionAsset.Player.OpenBook.performed += OnOpenBookInput;
 
         _playerActionAsset.Player.Run.started += OnRun;
         _playerActionAsset.Player.Run.canceled += OnRun;
@@ -75,13 +79,21 @@ public class ThirdPersonController : MonoBehaviour
     
     private void OnInventoryInput(InputAction.CallbackContext context)
     {
+        _inventory.SetActive(true);
         cameraManager.ActivateInventoryCamera();
         
         _playerActionAsset.Player.Disable();
         _playerActionAsset.Inventory.Enable();
-
-        
     }
+
+    private void OnOpenBookInput(InputAction.CallbackContext context)
+    {
+        _book.SetActive(true);        
+
+        _playerActionAsset.Player.Disable();
+        _playerActionAsset.Book.Enable();
+    }
+
     private void Interact(InputAction.CallbackContext context)
     {
         if (_interactor.canInteract)
