@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class ThirdPersonController : MonoBehaviour
 {
     [SerializeField] GameObject _inventory;
-    [SerializeField] GameObject _book;
+    [SerializeField] BookManager _bookManager;
 
     //Input fields
     private IA_ThirdPersonController _playerActionAsset;
@@ -88,10 +88,9 @@ public class ThirdPersonController : MonoBehaviour
 
     private void OnOpenBookInput(InputAction.CallbackContext context)
     {
-        _book.SetActive(true);        
-
         _playerActionAsset.Player.Disable();
         _playerActionAsset.Book.Enable();
+        _bookManager.OpenBook();
     }
 
     private void Interact(InputAction.CallbackContext context)

@@ -390,6 +390,17 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""action"": ""ReturnToPlayer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1876ed19-ed27-49da-b40c-4e6ead95566c"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReturnToPlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },

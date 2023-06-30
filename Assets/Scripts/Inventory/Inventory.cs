@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     //private InputAction _resetMix;
 
     [SerializeField] private Pestle _pestle;
+    [SerializeField] private Canvas _inventoryCanvas;
 
     [Tooltip("The time it takes to an ingredient to move into the pestle, in seconds")]
     [SerializeField] private float _moveToMixTime = 1f;
@@ -35,6 +36,7 @@ public class Inventory : MonoBehaviour
             }
         }
         _inventoryActionAsset = new IA_ThirdPersonController();
+        _inventoryCanvas.gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -42,12 +44,13 @@ public class Inventory : MonoBehaviour
         _inventoryActionAsset.Inventory.AddToMix.performed += OnAddToMix;
         _inventoryActionAsset.Inventory.ResetMix.performed += OnResetMix;
         _inventoryActionAsset.Inventory.ReturnToPlayer.performed += OnReturnToPlayer;
-        _inventoryActionAsset.Inventory.Enable();
+        _inventoryActionAsset.Inventory.Enable();        
     }
 
     private void OnDisable()
     {
         _inventoryActionAsset.Inventory.Disable();
+        _inventoryCanvas.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -147,10 +150,12 @@ public class Inventory : MonoBehaviour
 
     private void OnReturnToPlayer(InputAction.CallbackContext context)
     {
+        Debug.Log("OnReturnToPlayer");
         GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>().ActivatePlayerCamera();
 
         _inventoryActionAsset.Player.Enable();
         _inventoryActionAsset.Inventory.Disable();
+        _inventoryCanvas.gameObject.SetActive(false);
         
     }
 }
