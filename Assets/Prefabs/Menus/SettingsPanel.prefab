@@ -515,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9.0001, y: -0.000038146973}
+  m_AnchoredPosition: {x: 9.0001, y: -0.0000076293945}
   m_SizeDelta: {x: -18, y: 67.546}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1463140889807086038
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7534625500240732136}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.86575633
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -992,8 +992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64cbb77ab689c1a4db2066987caa7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sfxOnHover: {fileID: 0}
-  _sfxOnClick: {fileID: 0}
+  _sfxOnHover: {fileID: 8300000, guid: 2e402e691f5302442a2036fe4881ae9b, type: 3}
+  _sfxOnClick: {fileID: 8300000, guid: eee382f26e843cd4597055cdc8f2e5df, type: 3}
 --- !u!82 &4310057352306197950
 AudioSource:
   m_ObjectHideFlags: 0

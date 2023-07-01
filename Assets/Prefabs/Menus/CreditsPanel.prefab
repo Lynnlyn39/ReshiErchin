@@ -271,8 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64cbb77ab689c1a4db2066987caa7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sfxOnHover: {fileID: 0}
-  _sfxOnClick: {fileID: 0}
+  _sfxOnHover: {fileID: 8300000, guid: 2e402e691f5302442a2036fe4881ae9b, type: 3}
+  _sfxOnClick: {fileID: 8300000, guid: eee382f26e843cd4597055cdc8f2e5df, type: 3}
 --- !u!82 &4310057352306197950
 AudioSource:
   m_ObjectHideFlags: 0
