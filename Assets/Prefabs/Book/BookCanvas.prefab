@@ -94,9 +94,9 @@ MonoBehaviour:
   _objectsToEnable:
   - {fileID: 2046209540713451452}
   _icon: {fileID: 6520183745144758160}
-  _iconIdle: {fileID: 0}
-  _iconHover: {fileID: 0}
-  _iconSelected: {fileID: 0}
+  _iconIdle: {fileID: 147406710, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  _iconHover: {fileID: 1911836788, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  _iconSelected: {fileID: -282270836, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
 --- !u!1 &187649837345954155
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,9 +191,9 @@ MonoBehaviour:
   _objectsToEnable:
   - {fileID: 5249845924670987117}
   _icon: {fileID: 1008007834001062818}
-  _iconIdle: {fileID: 0}
-  _iconHover: {fileID: 0}
-  _iconSelected: {fileID: 0}
+  _iconIdle: {fileID: -1154061734, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  _iconHover: {fileID: 1192044752, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  _iconSelected: {fileID: -896237236, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
 --- !u!1 &1164638009111014714
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,9 +501,9 @@ MonoBehaviour:
   _objectsToEnable:
   - {fileID: 2603268867939595716}
   _icon: {fileID: 1170129729120208773}
-  _iconIdle: {fileID: 0}
-  _iconHover: {fileID: 0}
-  _iconSelected: {fileID: 0}
+  _iconIdle: {fileID: 373023271, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  _iconHover: {fileID: 1886949102, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  _iconSelected: {fileID: -925600677, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
 --- !u!1 &2046209540713451452
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,9 +626,9 @@ MonoBehaviour:
   - {fileID: 6857300739468235772}
   - {fileID: 7924798403001923316}
   - {fileID: 2501944725569079654}
-  _tabIdle: {fileID: 0}
-  _tabHover: {fileID: 0}
-  _tabActive: {fileID: 0}
+  _tabIdle: {fileID: 147406710, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  _tabHover: {fileID: 1911836788, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  _tabActive: {fileID: -282270836, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
   _selectedTab: {fileID: 696587383833644744}
   _detail: {fileID: 3332577149902416397}
   defaultIcon: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}
@@ -908,9 +908,9 @@ MonoBehaviour:
   - {fileID: 314034358187026729}
   - {fileID: 8243356312692234269}
   - {fileID: 3247456746394390013}
-  _tabIdle: {fileID: 0}
-  _tabHover: {fileID: 0}
-  _tabActive: {fileID: 0}
+  _tabIdle: {fileID: 373023271, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  _tabHover: {fileID: 1886949102, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  _tabActive: {fileID: -925600677, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
   _selectedTab: {fileID: 3347460012611434710}
   _detail: {fileID: 3332577149902416397}
   defaultIcon: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}
@@ -1873,9 +1873,9 @@ MonoBehaviour:
   - {fileID: 55018677843436263}
   - {fileID: 1041981567446235287}
   - {fileID: 5184895614624203242}
-  _tabIdle: {fileID: 0}
-  _tabHover: {fileID: 0}
-  _tabActive: {fileID: 0}
+  _tabIdle: {fileID: -1154061734, guid: d865bfba62cc1eb4fbdafdd9d2063ccc, type: 3}
+  _tabHover: {fileID: 1192044752, guid: 290a24d02fd9932408021fa5f71b1f3a, type: 3}
+  _tabActive: {fileID: -896237236, guid: d7233f0bb5897874d829bf004985bb43, type: 3}
   _selectedTab: {fileID: 3476470007321166617}
   _detail: {fileID: 3332577149902416397}
   defaultIcon: {fileID: -101366747, guid: 1fac008dd0bd56c4f8a5fbfff55cd971, type: 3}

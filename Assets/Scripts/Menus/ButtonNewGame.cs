@@ -17,6 +17,6 @@ public class ButtonNewGame : Button
 
     public override void OnPointerClick(PointerEventData eventData)
     {        
-        _loader.LoadLevel(Scenes.PROLOGUE);
+        _loader.LoadNextLevel();
     }    
 }
