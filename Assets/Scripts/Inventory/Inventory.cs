@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private Pestle _pestle;
     [SerializeField] private Canvas _inventoryCanvas;
+    [SerializeField] private CameraManager _cameraManager;
 
     [Tooltip("The time it takes to an ingredient to move into the pestle, in seconds")]
     [SerializeField] private float _moveToMixTime = 1f;
@@ -151,8 +152,8 @@ public class Inventory : MonoBehaviour
     private void OnReturnToPlayer(InputAction.CallbackContext context)
     {
         Debug.Log("OnReturnToPlayer");
-        GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>().ActivatePlayerCamera();
-
+        //GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>().ActivatePlayerCamera();
+        _cameraManager.ActivatePlayerCamera();
         _inventoryActionAsset.Player.Enable();
         _inventoryActionAsset.Inventory.Disable();
         _inventoryCanvas.gameObject.SetActive(false);
