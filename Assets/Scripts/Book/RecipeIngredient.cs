@@ -28,8 +28,8 @@ public class RecipeIngredient
         foreach(InventoryItem item in items)
         {
             IngredientSO ing = (IngredientSO) item.Data;
-            if (ing.Equals(Ingredient))
-                count++;
+            if (ing.Name.Equals(Ingredient.Name))
+                count++;            
         }
         if (count != 0 && count == Quantity)
             return true;

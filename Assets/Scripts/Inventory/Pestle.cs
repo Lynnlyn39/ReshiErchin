@@ -10,11 +10,12 @@ public class Pestle : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Button[] _mixButtons;
     [SerializeField] private Image _progressBar;
     [SerializeField] private GameObject _progressBarGameObject;
-    
+    [SerializeField] private RecipeSO[] _recipes;
+
     private List<InventoryItem> _ingredients;
     private Inventory _inventory;
     private int _nextDropPointIndex = 0;
-    private RecipeSO[] _recipes;
+    
 
     public Vector3 DropPoint => _dropPoints[_nextDropPointIndex++ % _dropPoints.Length].position;
 
@@ -35,7 +36,7 @@ public class Pestle : MonoBehaviour
 
     private void Start()
     {
-        _recipes = FindObjectsByType<RecipeSO>(FindObjectsSortMode.None);
+        //_recipes = FindObjectsByType<RecipeSO>(FindObjectsSortMode.None);
         foreach (RecipeSO recipe in _recipes)
             Debug.Log($"Recipe added: {recipe.Name}");
     }
@@ -130,19 +131,20 @@ public class Pestle : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _progressBarGameObject.SetActive(false);
 
-        // Consume ingredients
-        ConsumeIngredients();
-
         // If it is a valid recipe, instantiate object
         RecipeSO result = ValidateRecipe(preparationType);
         if (result)
             Debug.Log($"{result.Name} created!!");
         else
             Debug.Log($"Preparation FAILED!");
+
+        // Consume ingredients
+        ConsumeIngredients();
     }
 
     private RecipeSO ValidateRecipe(PreparationType preparationType)
-    {        
+    {
+        Debug.Log($"Recipes: {_recipes.Length}");
         RecipeSO result = null;
         foreach(RecipeSO recipe in _recipes)
         {
