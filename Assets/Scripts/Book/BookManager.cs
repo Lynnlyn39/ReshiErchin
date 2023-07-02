@@ -32,14 +32,13 @@ public class BookManager : MonoBehaviour
     public void OnCloseBook(InputAction.CallbackContext context)
     {
         CloseBook();
-
     }
 
 
     public void OpenBook()
     {
-        _bookActionAsset.Player.Disable();
-        _bookActionAsset.Book.Enable();
+        //_bookActionAsset.Player.Disable();
+        //_bookActionAsset.Book.Enable();
         _book.SetActive(true);
     }
 

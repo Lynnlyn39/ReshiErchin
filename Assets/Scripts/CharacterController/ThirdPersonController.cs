@@ -60,6 +60,7 @@ public class ThirdPersonController : MonoBehaviour
     {
         if(DialogueManager.instance.dialogueIsPlaying)
         {
+            Debug.Log("DialogueIsPlaying");
             return;
         }
         _currentMovementInput = context.ReadValue<Vector2>();
@@ -83,7 +84,7 @@ public class ThirdPersonController : MonoBehaviour
         cameraManager.ActivateInventoryCamera();
         
         _playerActionAsset.Player.Disable();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         _playerActionAsset.Inventory.Enable();
     }
 
