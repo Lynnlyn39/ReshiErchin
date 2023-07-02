@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    private IA_ThirdPersonController _inventoryActionAsset;
+    //private IA_ThirdPersonController _inventoryActionAsset;
     //private InputAction _addToMix;
     //private InputAction _resetMix;
 
@@ -44,21 +44,21 @@ public class Inventory : MonoBehaviour
                 Debug.LogWarning($"Inventory slot: {slot.name} is missing an InventoryItemSO reference.");
             }
         }
-        _inventoryActionAsset = new IA_ThirdPersonController();
+        //_inventoryActionAsset = new IA_ThirdPersonController();
         _inventoryCanvas.gameObject.SetActive(false);
     }
 
     private void OnEnable()
     {
-        _inventoryActionAsset.Inventory.AddToMix.performed += OnAddToMix;
-        _inventoryActionAsset.Inventory.ResetMix.performed += OnResetMix;
-        _inventoryActionAsset.Inventory.ReturnToPlayer.performed += OnReturnToPlayer;
+        //_inventoryActionAsset.Inventory.AddToMix.performed += OnAddToMix;
+        //_inventoryActionAsset.Inventory.ResetMix.performed += OnResetMix;
+        //_inventoryActionAsset.Inventory.ReturnToPlayer.performed += OnReturnToPlayer;
         //_inventoryActionAsset.Inventory.Enable();        
     }
 
     private void OnDisable()
     {
-        _inventoryActionAsset.Inventory.Disable();
+        //_inventoryActionAsset.Inventory.Disable();
         _inventoryCanvas.gameObject.SetActive(false);
     }
 
@@ -95,10 +95,6 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void OnAddToMix(InputAction.CallbackContext context)
-    {
-        AddToMix();
-    }
 
     /// <summary>
     /// Move one ingredient from the inventory to the pestle
@@ -130,11 +126,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void OnResetMix(InputAction.CallbackContext context)
-    {
-        ResetMix();
-    }
-
     public void ResetMix()
     {
         _pestle.ResetMix();
@@ -162,8 +153,6 @@ public class Inventory : MonoBehaviour
         Debug.Log("OnReturnToPlayer");
         //GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>().ActivatePlayerCamera();
         _cameraManager.ActivatePlayerCamera();
-        _inventoryActionAsset.Player.Enable();
-        _inventoryActionAsset.Inventory.Disable();
         _inventoryCanvas.gameObject.SetActive(false);
         
     }

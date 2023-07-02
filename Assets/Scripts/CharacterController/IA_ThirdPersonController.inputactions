@@ -60,9 +60,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "OpenBook",
+                    "name": "Book",
                     "type": "Button",
                     "id": "fd161405-5655-46d2-bde5-0cb77762c1c5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AddToMix",
+                    "type": "Button",
+                    "id": "a3455107-f7e8-4bba-96a1-adae5d7476c0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ResetMix",
+                    "type": "Button",
+                    "id": "cc697213-3d6d-4d57-8d17-b7afb565ff2f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -253,7 +271,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "OpenBook",
+                    "action": "Book",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -264,48 +282,13 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "OpenBook",
+                    "action": "Book",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Inventory",
-            "id": "dac52f84-3098-4168-b25d-8912f32f81f1",
-            "actions": [
-                {
-                    "name": "AddToMix",
-                    "type": "Button",
-                    "id": "67ff5901-4cff-474e-9a7c-17994b24b0d0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 },
-                {
-                    "name": "ResetMix",
-                    "type": "Button",
-                    "id": "ba5ff7c3-0738-4bec-aa8a-04333863bafe",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ReturnToPlayer",
-                    "type": "Button",
-                    "id": "41fc1327-706f-486b-b4c5-05d050c5a675",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
                 {
                     "name": "",
-                    "id": "21470b7d-329e-4f79-a66c-03442a2e80f6",
+                    "id": "1e8d349a-82f7-46ac-86fa-8b962b392c69",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -316,7 +299,7 @@
                 },
                 {
                     "name": "",
-                    "id": "60bf24cb-4606-4b13-805f-52c6ba7263dc",
+                    "id": "2a46e4a4-f3ec-4fb8-bebf-7975537531b7",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
@@ -327,7 +310,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e5455dd0-bec9-4c5c-bf7d-21d3d20b6bfc",
+                    "id": "4ba36d5d-06ac-46d0-8744-c30c373eaced",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
@@ -338,95 +321,12 @@
                 },
                 {
                     "name": "",
-                    "id": "bafd0d24-b4ac-4b7c-8017-4216e33487af",
+                    "id": "5d8031db-8031-4448-b628-04420a89ff23",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "ResetMix",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5c07f8bb-272a-4e2a-a11a-d2916e0b225a",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "ReturnToPlayer",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a4134c21-5ea4-4708-819a-57f9cf2c21db",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ReturnToPlayer",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1876ed19-ed27-49da-b40c-4e6ead95566c",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ReturnToPlayer",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Book",
-            "id": "e707658d-5f2b-4b8e-b1fd-800c52ed9c8a",
-            "actions": [
-                {
-                    "name": "CloseBook",
-                    "type": "Button",
-                    "id": "03af88ec-387b-47ca-ad78-ddb75f1aa81e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "a51562a3-2246-4449-bb72-77f32b48f99d",
-                    "path": "<Keyboard>/b",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "CloseBook",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "82804fe5-fd5a-4183-bed3-b29acdd3eeee",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "CloseBook",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "45ee9c3f-8137-4529-9f7e-e79fbfcb6ffd",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "CloseBook",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

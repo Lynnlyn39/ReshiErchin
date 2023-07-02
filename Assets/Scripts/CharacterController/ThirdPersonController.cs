@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 public class ThirdPersonController : MonoBehaviour
 {
-    [SerializeField] GameObject _inventory;
+    [SerializeField] InventoryManager _inventoryManager;
     [SerializeField] BookManager _bookManager;
 
     //Input fields
@@ -49,10 +49,14 @@ public class ThirdPersonController : MonoBehaviour
         _playerActionAsset.Player.Interact.performed += Interact;
 
         _playerActionAsset.Player.Inventory.performed += OnInventoryInput;
-        _playerActionAsset.Player.OpenBook.performed += OnOpenBookInput;
+        _playerActionAsset.Player.Book.performed += OnBookInput;
 
         _playerActionAsset.Player.Run.started += OnRun;
         _playerActionAsset.Player.Run.canceled += OnRun;
+
+        // Inventory actions
+        _playerActionAsset.Player.AddToMix.performed += OnAddToMix;
+        _playerActionAsset.Player.ResetMix.performed += OnResetMix;
 
         _interactor = GetComponent<Interactor>();
     }
@@ -80,19 +84,21 @@ public class ThirdPersonController : MonoBehaviour
     
     private void OnInventoryInput(InputAction.CallbackContext context)
     {
-        _inventory.SetActive(true);
-        cameraManager.ActivateInventoryCamera();
-        
-        _playerActionAsset.Player.Disable();
-        //gameObject.SetActive(false);
-        _playerActionAsset.Inventory.Enable();
+        _inventoryManager.ToggleInventory();
     }
 
-    private void OnOpenBookInput(InputAction.CallbackContext context)
+    private void OnAddToMix(InputAction.CallbackContext context)
     {
-        //_playerActionAsset.Player.Disable();
-        //_playerActionAsset.Book.Enable();
-        //_bookManager.OpenBook();
+        _inventoryManager.AddToMix();
+    }
+
+    private void OnResetMix(InputAction.CallbackContext context)
+    {
+        _inventoryManager.ResetMix();
+    }
+
+    private void OnBookInput(InputAction.CallbackContext context)
+    {
         _bookManager.ToggleBook();
     }
 

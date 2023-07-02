@@ -18,5 +18,5 @@ MonoBehaviour:
   info: []
   _prefab: {fileID: 6026126457082460225, guid: 2adeea07e6fee4546a2e2f02534722cc, type: 3}
   isKnown: 1
-  _unlimited: 0
+  _unlimited: 1
   _maxStackSize: 99
