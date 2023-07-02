@@ -134,7 +134,11 @@ public class Inventory : MonoBehaviour
     }
 
     IEnumerator MoveToMix(InventoryItem p_item)
-    {        
+    {   
+        if (!p_item.Data.Prefab)
+        {
+            Debug.Log($"Prefab is missing in the InventoryItemSO {p_item.Data.Name}");            
+        }
         GameObject item = Instantiate(p_item.Data.Prefab, transform);
         item.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
         _pestle.AddIngredient(item.GetComponent<InventoryItem>());
@@ -148,6 +152,6 @@ public class Inventory : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        item.transform.position = endPosition;        
-    }    
+        item.transform.position = endPosition;
+    }
 }
