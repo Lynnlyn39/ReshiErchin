@@ -32,7 +32,7 @@ public class ThirdPersonController : MonoBehaviour
 
     private Interactor _interactor;
 
-    [SerializeField] private Camera playerCamera;
+    //[SerializeField] private Camera playerCamera;
 
     void Awake()
     {
@@ -83,6 +83,7 @@ public class ThirdPersonController : MonoBehaviour
         cameraManager.ActivateInventoryCamera();
         
         _playerActionAsset.Player.Disable();
+        gameObject.SetActive(false);
         _playerActionAsset.Inventory.Enable();
     }
 

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    private IA_ThirdPersonController _playerActionAsset;
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private Camera _inventoryCamera;
     [SerializeField] private GameObject _inventoryCanvas;
@@ -9,6 +10,10 @@ public class CameraManager : MonoBehaviour
     private void Awake()
     {
         ActivatePlayerCamera();
+        _playerActionAsset = new IA_ThirdPersonController();
+        _playerActionAsset.Player.Enable();
+        _playerActionAsset.Book.Disable();
+        _playerActionAsset.Inventory.Disable();
     }
     public void ActivateInventoryCamera()
     {
