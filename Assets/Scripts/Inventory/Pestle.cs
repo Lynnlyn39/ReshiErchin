@@ -115,6 +115,7 @@ public class Pestle : MonoBehaviour
 
     IEnumerator MixCoroutine(PreparationType preparationType)
     {
+        Debug.Log($"Preparing {preparationType} ...");
         _progressBarGameObject.SetActive(true);
         float duration = 5f;
         float time = 0f;
@@ -134,6 +135,10 @@ public class Pestle : MonoBehaviour
 
         // If it is a valid recipe, instantiate object
         RecipeSO result = ValidateRecipe(preparationType);
+        if (result)
+            Debug.Log($"{result.Name} created!!");
+        else
+            Debug.Log($"Preparation FAILED!");
     }
 
     private RecipeSO ValidateRecipe(PreparationType preparationType)

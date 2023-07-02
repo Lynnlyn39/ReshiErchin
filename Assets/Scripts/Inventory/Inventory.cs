@@ -140,8 +140,8 @@ public class Inventory : MonoBehaviour
         _pestle.AddIngredient(item.GetComponent<InventoryItem>());
         item.transform.position = p_item.transform.position;
         float time = 0;
-        Vector3 startPosition = item.transform.position;        
-        Vector3 endPosition = _pestle.DropPoint + new Vector3(Random.value, 0f, Random.value);
+        Vector3 startPosition = item.transform.position;
+        Vector3 endPosition = _pestle.DropPoint; // + new Vector3(Random.value, 0f, Random.value);
         while (time < _moveToMixTime)
         {
             item.transform.position = Vector3.Lerp(startPosition, endPosition, time / _moveToMixTime);
