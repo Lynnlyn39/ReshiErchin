@@ -7,6 +7,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Camera _inventoryCamera;
     [SerializeField] private GameObject _inventoryCanvas;
 
+    public Camera PlayerCamera { get => _playerCamera; set => _playerCamera = value; }
+    public Camera InventoryCamera { get => _inventoryCamera; set => _inventoryCamera = value; }
+
     private void Awake()
     {
         ActivatePlayerCamera();
@@ -18,15 +21,17 @@ public class CameraManager : MonoBehaviour
     }
     public void ActivateInventoryCamera()
     {
-        _playerCamera.enabled = false;
-        _inventoryCamera.enabled = true;
+        PlayerCamera.enabled = false;
+        InventoryCamera.enabled = true;
         _inventoryCanvas.SetActive(true);
     }
 
     public void ActivatePlayerCamera()
     {
-        _inventoryCamera.enabled = false;
+        InventoryCamera.enabled = false;
         _inventoryCanvas.SetActive(false);
-        _playerCamera.enabled = true;        
+        PlayerCamera.enabled = true;        
     }
+
+
 }

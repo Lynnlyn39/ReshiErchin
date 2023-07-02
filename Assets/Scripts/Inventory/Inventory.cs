@@ -105,9 +105,9 @@ public class Inventory : MonoBehaviour
     {
         RaycastHit hit;
 
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Ray ray = Camera.current.ScreenPointToRay(mousePosition);
-
+        Vector2 mousePosition = Mouse.current.position.ReadValue();        
+        Ray ray = _cameraManager.InventoryCamera.ScreenPointToRay(mousePosition);
+        //Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
         if (Physics.Raycast(ray, out hit, 1000f, InventoryLayerMask))
         {
             Debug.Log("Raycast hit object " + hit.transform.name + " at the position of " + hit.transform.position);
@@ -136,6 +136,7 @@ public class Inventory : MonoBehaviour
     IEnumerator MoveToMix(InventoryItem p_item)
     {        
         GameObject item = Instantiate(p_item.Data.Prefab, transform);
+        item.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
         _pestle.AddIngredient(item.GetComponent<InventoryItem>());
         item.transform.position = p_item.transform.position;
         float time = 0;
