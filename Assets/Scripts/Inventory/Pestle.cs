@@ -134,9 +134,14 @@ public class Pestle : MonoBehaviour
         // If it is a valid recipe, instantiate object
         RecipeSO result = ValidateRecipe(preparationType);
         if (result)
+        {
             Debug.Log($"{result.Name} created!!");
+            _inventory.AddItem(result);
+        }
         else
+        {
             Debug.Log($"Preparation FAILED!");
+        }
 
         // Consume ingredients
         ConsumeIngredients();
