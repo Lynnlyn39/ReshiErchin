@@ -416,15 +416,6 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""PointerClick"",
-                    ""type"": ""Button"",
-                    ""id"": ""e2746dfd-528d-43ce-99ac-5611240e2109"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -458,28 +449,6 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""CloseBook"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8bfd51a1-f784-4555-9610-9d2279db6370"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""PointerClick"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""80c746d0-749a-4b04-ae20-4e8bab29d350"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""PointerClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -533,7 +502,6 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
         // Book
         m_Book = asset.FindActionMap("Book", throwIfNotFound: true);
         m_Book_CloseBook = m_Book.FindAction("CloseBook", throwIfNotFound: true);
-        m_Book_PointerClick = m_Book.FindAction("PointerClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -752,13 +720,11 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
     private readonly InputActionMap m_Book;
     private List<IBookActions> m_BookActionsCallbackInterfaces = new List<IBookActions>();
     private readonly InputAction m_Book_CloseBook;
-    private readonly InputAction m_Book_PointerClick;
     public struct BookActions
     {
         private @IA_ThirdPersonController m_Wrapper;
         public BookActions(@IA_ThirdPersonController wrapper) { m_Wrapper = wrapper; }
         public InputAction @CloseBook => m_Wrapper.m_Book_CloseBook;
-        public InputAction @PointerClick => m_Wrapper.m_Book_PointerClick;
         public InputActionMap Get() { return m_Wrapper.m_Book; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -771,9 +737,6 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @CloseBook.started += instance.OnCloseBook;
             @CloseBook.performed += instance.OnCloseBook;
             @CloseBook.canceled += instance.OnCloseBook;
-            @PointerClick.started += instance.OnPointerClick;
-            @PointerClick.performed += instance.OnPointerClick;
-            @PointerClick.canceled += instance.OnPointerClick;
         }
 
         private void UnregisterCallbacks(IBookActions instance)
@@ -781,9 +744,6 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
             @CloseBook.started -= instance.OnCloseBook;
             @CloseBook.performed -= instance.OnCloseBook;
             @CloseBook.canceled -= instance.OnCloseBook;
-            @PointerClick.started -= instance.OnPointerClick;
-            @PointerClick.performed -= instance.OnPointerClick;
-            @PointerClick.canceled -= instance.OnPointerClick;
         }
 
         public void RemoveCallbacks(IBookActions instance)
@@ -838,6 +798,5 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
     public interface IBookActions
     {
         void OnCloseBook(InputAction.CallbackContext context);
-        void OnPointerClick(InputAction.CallbackContext context);
     }
 }

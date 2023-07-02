@@ -394,15 +394,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "PointerClick",
-                    "type": "Button",
-                    "id": "e2746dfd-528d-43ce-99ac-5611240e2109",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -436,28 +427,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "CloseBook",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8bfd51a1-f784-4555-9610-9d2279db6370",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "PointerClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "80c746d0-749a-4b04-ae20-4e8bab29d350",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "PointerClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

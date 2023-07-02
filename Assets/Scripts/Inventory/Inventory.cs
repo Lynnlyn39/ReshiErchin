@@ -29,7 +29,7 @@ public class Inventory : MonoBehaviour
             {
                 if (_inventorySlots.TryAdd(slot.Data, slot))
                 {
-                    Debug.Log($"{slot.Data.Name} SLOT added to Inventory.");
+                    //Debug.Log($"{slot.Data.Name} SLOT added to Inventory.");
                 }
             } else
             {
@@ -45,7 +45,7 @@ public class Inventory : MonoBehaviour
         _inventoryActionAsset.Inventory.AddToMix.performed += OnAddToMix;
         _inventoryActionAsset.Inventory.ResetMix.performed += OnResetMix;
         _inventoryActionAsset.Inventory.ReturnToPlayer.performed += OnReturnToPlayer;
-        _inventoryActionAsset.Inventory.Enable();        
+        //_inventoryActionAsset.Inventory.Enable();        
     }
 
     private void OnDisable()
