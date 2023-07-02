@@ -90,9 +90,10 @@ public class ThirdPersonController : MonoBehaviour
 
     private void OnOpenBookInput(InputAction.CallbackContext context)
     {
-        _playerActionAsset.Player.Disable();
-        _playerActionAsset.Book.Enable();
-        _bookManager.OpenBook();
+        //_playerActionAsset.Player.Disable();
+        //_playerActionAsset.Book.Enable();
+        //_bookManager.OpenBook();
+        _bookManager.ToggleBook();
     }
 
     private void Interact(InputAction.CallbackContext context)

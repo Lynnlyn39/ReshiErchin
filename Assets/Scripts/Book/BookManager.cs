@@ -22,31 +22,33 @@ public class BookManager : MonoBehaviour
         _bookActionAsset.Book.Disable();
     }
 
-/*    public void OnOpenBook(InputAction.CallbackContext context)
-    {
-        _bookActionAsset.Player.Disable();
-        _bookActionAsset.Book.Enable();        
-        OpenBook();        
-    }
-*/
     public void OnCloseBook(InputAction.CallbackContext context)
     {
         CloseBook();
     }
 
-
     public void OpenBook()
     {
-        //_bookActionAsset.Player.Disable();
-        //_bookActionAsset.Book.Enable();
         _book.SetActive(true);
     }
 
     public void CloseBook()
     {
-        _bookActionAsset.Book.Disable();
-        _bookActionAsset.Player.Enable();
+        Debug.Log("CloseBook called");
         _book.SetActive(false);
+        //_bookActionAsset.Book.Disable();
+        //_bookActionAsset.Player.Enable();
+    }
+
+    public void ToggleBook()
+    {
+        if (_book.activeSelf)
+        {
+            CloseBook();
+        } else
+        {
+            OpenBook();
+        }
     }
 
 }

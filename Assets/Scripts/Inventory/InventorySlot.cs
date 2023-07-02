@@ -54,7 +54,10 @@ public class InventorySlot : MonoBehaviour
         } 
         else
         {
-            Debug.Log("Inventory stack is full");
+            if (Data.MaxStackSize > 0)
+                Debug.Log("Inventory stack is full");
+            else
+                Debug.LogWarning($"{Data.Name} max stack size is 0, fix it in the SO.");
         }
         return result;
     }
