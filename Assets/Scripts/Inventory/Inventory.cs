@@ -106,7 +106,7 @@ public class Inventory : MonoBehaviour
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 100f, _inventoryLayerMask))
+        if (Physics.Raycast(ray, out hit, 1000f, _inventoryLayerMask))
         {
             Debug.Log("Raycast hit object " + hit.transform.name + " at the position of " + hit.transform.position);
             InventoryItem item = hit.transform.GetComponent<InventoryItem>();
