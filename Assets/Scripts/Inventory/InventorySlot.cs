@@ -90,6 +90,7 @@ public class InventorySlot : MonoBehaviour
             if (!_instancedItem && _data.Prefab)
             {
                 _instancedItem = Instantiate(_data.Prefab, transform);
+                _instancedItem.gameObject.layer = 9;
             } else
             {
                 Debug.LogWarning($"No prefab set in ItemData (InventoryItemSO) {_data.Name}");

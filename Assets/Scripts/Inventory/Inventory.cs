@@ -18,6 +18,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private LayerMask _inventoryLayerMask;
     private Dictionary<InventoryItemSO, InventorySlot> _inventorySlots;
 
+    public LayerMask InventoryLayerMask { get => _inventoryLayerMask; set => _inventoryLayerMask = value; }
+
     private void Awake()
     {
         _inventorySlots = new Dictionary<InventoryItemSO, InventorySlot>();
@@ -104,9 +106,9 @@ public class Inventory : MonoBehaviour
         RaycastHit hit;
 
         Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+        Ray ray = Camera.current.ScreenPointToRay(mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 1000f, _inventoryLayerMask))
+        if (Physics.Raycast(ray, out hit, 1000f, InventoryLayerMask))
         {
             Debug.Log("Raycast hit object " + hit.transform.name + " at the position of " + hit.transform.position);
             InventoryItem item = hit.transform.GetComponent<InventoryItem>();
