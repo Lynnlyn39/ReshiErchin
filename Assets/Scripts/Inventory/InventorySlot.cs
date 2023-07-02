@@ -34,7 +34,12 @@ public class InventorySlot : MonoBehaviour
     public bool AddItem()
     {
         if (Data.Unlimited)
+        {
+            if (!_instancedItem || !_instancedItem.activeSelf)
+                ShowSlot();
+
             return true;
+        }
 
         bool result = false;
         if (Stack < Data.MaxStackSize)
@@ -57,7 +62,10 @@ public class InventorySlot : MonoBehaviour
     public bool RemoveItem()
     {
         if (Data.Unlimited)
+        {
             return true;
+        }
+            
         
         if (Stack == 0)
             return false;
