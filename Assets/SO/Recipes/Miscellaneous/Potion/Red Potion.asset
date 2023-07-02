@@ -24,7 +24,7 @@ MonoBehaviour:
   _maxStackSize: 10
   _preparationType: 6
   _ingredients:
-  - _ingredient: {fileID: 0}
+  - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 1
   - _ingredient: {fileID: 11400000, guid: 8e3acbf4d68fc8b48ac3f7b7ffe0c6b0, type: 2}
     _quantity: 1

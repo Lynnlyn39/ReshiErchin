@@ -26,5 +26,5 @@ MonoBehaviour:
   _ingredients:
   - _ingredient: {fileID: 11400000, guid: 29eef4f62fbc77542aae23e82840a43e, type: 2}
     _quantity: 2
-  - _ingredient: {fileID: 11400000, guid: 86efb033978bf4d4d80117f1fb7e6bd3, type: 2}
+  - _ingredient: {fileID: 11400000, guid: 9400a20e72fad7f41b0715eaaf5a0c91, type: 2}
     _quantity: 2

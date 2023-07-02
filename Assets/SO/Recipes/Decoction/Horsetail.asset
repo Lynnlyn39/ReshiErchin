@@ -19,10 +19,10 @@ MonoBehaviour:
     in very high doses or for a long time because it may or for a long time because
     it can produce diarrhea and diarrhea and tremors in the feet. Ingredients: 4
     cup of Water 1 Horsetail'
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: eaf613a93cd084b4c891e2f1dd246217, type: 3}
   info: []
   _prefab: {fileID: 2636275239409046754, guid: 1859e4da7af8d5840a20008931070969, type: 3}
-  isKnown: 0
+  isKnown: 1
   _unlimited: 0
   _maxStackSize: 10
   _preparationType: 0

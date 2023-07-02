@@ -26,7 +26,7 @@ public class Button : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, 
     /// <param name="eventData"></param>
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log($"{name} OnClick event NOT IMPLEMENTED.");
+        //Debug.Log($"{name} OnClick event NOT IMPLEMENTED.");
     }
 
     /// <summary>
