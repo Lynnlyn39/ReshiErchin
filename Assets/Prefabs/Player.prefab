@@ -76,9 +76,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65ae5e0ef32a2c4383b8e657767b3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 0}
+  _inventoryManager: {fileID: 0}
   _bookManager: {fileID: 0}
   cameraManager: {fileID: 0}
+  startDialogue: {fileID: 4900000, guid: 11d3005fa56381842b9200b7abf73d09, type: 3}
 --- !u!114 &5918468658312567998
 MonoBehaviour:
   m_ObjectHideFlags: 0

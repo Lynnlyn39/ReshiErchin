@@ -33,6 +33,7 @@ public class ThirdPersonController : MonoBehaviour
     private Interactor _interactor;
 
     //[SerializeField] private Camera playerCamera;
+    [SerializeField] private TextAsset startDialogue;
 
     void Awake()
     {
@@ -81,7 +82,10 @@ public class ThirdPersonController : MonoBehaviour
     {
         _isRunPressed = context.ReadValueAsButton();
     }
-    
+    private void Start()
+    {
+        DialogueManager.instance.EnterDialogueMode(startDialogue);
+    }
     private void OnInventoryInput(InputAction.CallbackContext context)
     {
         _inventoryManager.ToggleInventory();
