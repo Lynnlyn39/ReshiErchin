@@ -20,7 +20,7 @@ MonoBehaviour:
     2 Chamomille\t"
   _icon: {fileID: 0}
   info: []
-  _prefab: {fileID: 3544246039359653967, guid: ea1a434c75946ca49a78c6db430a4883, type: 3}
+  _prefab: {fileID: 5649468860533634377, guid: 315b4a339d21e4941bc26c70815c5cfa, type: 3}
   isKnown: 0
   _unlimited: 0
   _maxStackSize: 10

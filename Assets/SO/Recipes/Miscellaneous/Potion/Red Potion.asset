@@ -18,8 +18,8 @@ MonoBehaviour:
     Ingredients:  1 Blue Potion 1 Reshi''s Blood '
   _icon: {fileID: 0}
   info: []
-  _prefab: {fileID: 3904257780681097376, guid: d2d62d0f3f9ced04cbde43da90c2280b, type: 3}
-  isKnown: 0
+  _prefab: {fileID: 2351260767269478133, guid: 2b4c5674c521cec4ba61c089ab47cc5f, type: 3}
+  isKnown: 1
   _unlimited: 0
   _maxStackSize: 10
   _preparationType: 6

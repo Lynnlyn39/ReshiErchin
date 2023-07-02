@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
 
     [Tooltip("The time it takes to an ingredient to move into the pestle, in seconds")]
     [SerializeField] private float _moveToMixTime = 1f;
-
+    [SerializeField] private LayerMask _inventoryLayerMask;
     private Dictionary<InventoryItemSO, InventorySlot> _inventorySlots;
 
     private void Awake()
@@ -106,7 +106,7 @@ public class Inventory : MonoBehaviour
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(mousePosition);
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 100f, _inventoryLayerMask))
         {
             Debug.Log("Raycast hit object " + hit.transform.name + " at the position of " + hit.transform.position);
             InventoryItem item = hit.transform.GetComponent<InventoryItem>();
@@ -147,13 +147,4 @@ public class Inventory : MonoBehaviour
         }
         item.transform.position = endPosition;        
     }    
-
-    private void OnReturnToPlayer(InputAction.CallbackContext context)
-    {
-        Debug.Log("OnReturnToPlayer");
-        //GameObject.FindGameObjectWithTag("CameraManager").GetComponent<CameraManager>().ActivatePlayerCamera();
-        _cameraManager.ActivatePlayerCamera();
-        _inventoryCanvas.gameObject.SetActive(false);
-        
-    }
 }
