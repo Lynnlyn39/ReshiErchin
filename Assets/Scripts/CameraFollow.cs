@@ -11,5 +11,6 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = player.transform.position + new Vector3(0, 2.5f, -8);
+        transform.LookAt(player.transform);
     }
 }

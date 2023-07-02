@@ -30,6 +30,14 @@ public class Inventory : MonoBehaviour
                 if (_inventorySlots.TryAdd(slot.Data, slot))
                 {
                     //Debug.Log($"{slot.Data.Name} SLOT added to Inventory.");
+                    if (slot.Data.Unlimited)
+                    {
+                        AddItem(slot.Data);
+                    } else
+                    {
+                        for (int i = 0; i < slot.Stack; i++)
+                            AddItem(slot.Data);
+                    }
                 }
             } else
             {
