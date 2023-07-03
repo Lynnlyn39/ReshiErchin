@@ -27,7 +27,7 @@ public class ThirdPersonController : MonoBehaviour
 
     bool _isMovementPressed;
     bool _isRunPressed;
-    float _rotationFactor = 15f;
+    float _rotationFactor = 1f;
     float _runMultiplier = 3f;
 
     private Interactor _interactor;
