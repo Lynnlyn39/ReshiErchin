@@ -21,6 +21,9 @@ namespace CustomUI
 
         public void OnTabSelected(BookSlot tab)        
         {
+            if (_audioSource)
+                _audioSource.Play();
+
             if (tab.BookEntry && tab.BookEntry.IsKnown)
             {
                 _selectedTab = tab;

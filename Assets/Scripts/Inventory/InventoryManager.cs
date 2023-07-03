@@ -5,15 +5,23 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] GameObject _inventorySet;
     [SerializeField] Inventory _inventory;
     [SerializeField] CameraManager _cameraManager;
+    [SerializeField] AudioSource _audioSource;
+    
 
     public void OpenInventory()
     {
+        if (_audioSource)
+            _audioSource.Play();
+
         _inventorySet.SetActive(true);
         _cameraManager.ActivateInventoryCamera();
     }
 
     public void CloseInventory()
     {
+        if (_audioSource)
+            _audioSource.Play();
+
         _inventorySet.SetActive(false);
         _cameraManager.ActivatePlayerCamera();
     }

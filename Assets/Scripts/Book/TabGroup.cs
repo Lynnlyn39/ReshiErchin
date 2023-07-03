@@ -13,6 +13,7 @@ namespace CustomUI
         [SerializeField] protected Sprite _tabHover;
         [SerializeField] protected Sprite _tabActive;
         [SerializeField] protected TabButton _selectedTab;
+        [SerializeField] protected AudioSource _audioSource;
 
         protected virtual void Start()
         {
@@ -45,6 +46,9 @@ namespace CustomUI
 
         public virtual void OnTabSelected(TabButton tab)
         {
+            if (_audioSource)
+                _audioSource.Play();
+
             _selectedTab = tab;
             ResetTabs();
             tab.Icon.sprite = tab.IconSelected ? tab.IconSelected : _tabActive;

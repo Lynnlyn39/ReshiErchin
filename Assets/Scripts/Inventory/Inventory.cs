@@ -16,6 +16,12 @@ public class Inventory : MonoBehaviour
     [Tooltip("The time it takes to an ingredient to move into the pestle, in seconds")]
     [SerializeField] private float _moveToMixTime = 1f;
     [SerializeField] private LayerMask _inventoryLayerMask;
+
+    [SerializeField] private AudioClip _addIngredientSfx;    
+    [SerializeField] private AudioSource _audioSource;
+    
+    
+    
     private Dictionary<InventoryItemSO, InventorySlot> _inventorySlots;
 
     public LayerMask InventoryLayerMask { get => _inventoryLayerMask; set => _inventoryLayerMask = value; }
@@ -119,6 +125,10 @@ public class Inventory : MonoBehaviour
                 } else
                 {
                     item.Slot.RemoveItem();
+
+                    if (_audioSource && _addIngredientSfx)
+                        _audioSource.PlayOneShot(_addIngredientSfx);
+
                     StartCoroutine(MoveToMix(item));                    
                 }               
             } else

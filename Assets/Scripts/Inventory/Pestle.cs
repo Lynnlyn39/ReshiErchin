@@ -11,6 +11,8 @@ public class Pestle : MonoBehaviour
     [SerializeField] private Image _progressBar;
     [SerializeField] private GameObject _progressBarGameObject;
     [SerializeField] private RecipeSO[] _recipes;
+    [SerializeField] private AudioClip _prepareRecipeSfx;
+    [SerializeField] private AudioSource _audioSource;
 
     private List<InventoryItem> _ingredients;
     private Inventory _inventory;
@@ -136,6 +138,9 @@ public class Pestle : MonoBehaviour
         if (result)
         {
             Debug.Log($"{result.Name} created!!");
+            if (_audioSource && _prepareRecipeSfx)
+                _audioSource.PlayOneShot(_prepareRecipeSfx);
+
             _inventory.AddItem(result);
         }
         else
