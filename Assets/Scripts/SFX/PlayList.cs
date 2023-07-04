@@ -47,7 +47,8 @@ public class PlayList : MonoBehaviour
         {
             //_isBattle = false;            
             _sfxPlayer.Volume = 0f;
-            _sfxPlayer.Play(GetNextClip());
+            //_sfxPlayer.Play(GetNextClip());
+            _sfxPlayer.Play(GetRandomClip());            
             StartCoroutine(FadeIn());
         }
     }
@@ -102,5 +103,10 @@ public class PlayList : MonoBehaviour
     private AudioClip GetNextClip()
     {
         return _clips[(_index++) % _clips.Length];
+    }
+
+    private AudioClip GetRandomClip()
+    {
+        return _clips[Random.Range(0, _clips.Length)];
     }
 }
