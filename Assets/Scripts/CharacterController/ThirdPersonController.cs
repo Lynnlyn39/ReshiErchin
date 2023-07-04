@@ -150,10 +150,7 @@ public class ThirdPersonController : MonoBehaviour
         positionToLookAt.x = _currentMovement.x;
         positionToLookAt.y = 0;
         positionToLookAt.z = _currentMovement.z;
-
-        Debug.DrawLine(transform.position, positionToLookAt, Color.red, 3f);
-        Debug.Log(positionToLookAt);
-
+        
         Quaternion currentRotation = transform.rotation;
         if(_isMovementPressed)
         {
