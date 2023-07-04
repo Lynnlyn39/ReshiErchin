@@ -16,7 +16,7 @@ MonoBehaviour:
   _description: 'Desciption: A concoction used to restore Reshi''s health. It can
     only have a maximum of 4 charges (two default, and two using the "Blue Potion").
     Ingredients:  1 Blue Potion 1 Reshi''s Blood '
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: de6a18430f5860940b431e43d53397f3, type: 3}
   info: []
   _prefab: {fileID: 2351260767269478133, guid: 2b4c5674c521cec4ba61c089ab47cc5f, type: 3}
   isKnown: 1

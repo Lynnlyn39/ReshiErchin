@@ -8,7 +8,12 @@ public class InGameMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject _inGameMenu;
     //[SerializeField] private MouseCursorSettings _mouseCursor;
- 
+
+    private void Start()
+    {
+        _inGameMenu.SetActive(false);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {

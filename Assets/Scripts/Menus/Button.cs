@@ -47,8 +47,7 @@ public class Button : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, 
     /// </summary>
     /// <param name="eventData"></param>
     public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("Button::OnHover");
+    {        
         if (_sfxOnHover)
         {
             _audioSource.clip = _sfxOnHover;
