@@ -4,6 +4,11 @@ public class BookManager : MonoBehaviour
 {
     [SerializeField] GameObject _book;
 
+    private void Start()
+    {
+        _book.SetActive(false);
+    }
+
     public void OpenBook()
     {
         _book.SetActive(true);

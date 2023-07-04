@@ -6,7 +6,11 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] Inventory _inventory;
     [SerializeField] CameraManager _cameraManager;
     [SerializeField] AudioSource _audioSource;
-    
+
+    private void Start()
+    {
+        _inventorySet.SetActive(false);
+    }
 
     public void OpenInventory()
     {
