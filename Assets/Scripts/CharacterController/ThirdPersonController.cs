@@ -35,15 +35,10 @@ public class ThirdPersonController : MonoBehaviour
     //[SerializeField] private Camera playerCamera;
     [SerializeField] private TextAsset startDialogue;
 
-    void Awake()
+
+    private void Awake()
     {
         _playerActionAsset = new IA_ThirdPersonController();
-        _characterController = GetComponent<CharacterController>();
-        _animator = GetComponent<Animator>();
-
-        isWalkingHash = Animator.StringToHash("isWalking");
-        isRunningHash = Animator.StringToHash("isRunning");
-
         _playerActionAsset.Player.Move.started += OnMovementInput;
         _playerActionAsset.Player.Move.canceled += OnMovementInput;
         _playerActionAsset.Player.Move.performed += OnMovementInput;
@@ -58,8 +53,18 @@ public class ThirdPersonController : MonoBehaviour
         // Inventory actions
         _playerActionAsset.Player.AddToMix.performed += OnAddToMix;
         _playerActionAsset.Player.ResetMix.performed += OnResetMix;
+    }
+    void Start()
+    {
+        _characterController = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
+
+        isWalkingHash = Animator.StringToHash("isWalking");
+        isRunningHash = Animator.StringToHash("isRunning");
 
         _interactor = GetComponent<Interactor>();
+
+        DialogueManager.instance.EnterDialogueMode(startDialogue);
     }
     void OnMovementInput (InputAction.CallbackContext context)
     {
@@ -82,10 +87,7 @@ public class ThirdPersonController : MonoBehaviour
     {
         _isRunPressed = context.ReadValueAsButton();
     }
-    private void Start()
-    {
-        DialogueManager.instance.EnterDialogueMode(startDialogue);
-    }
+
     private void OnInventoryInput(InputAction.CallbackContext context)
     {
         _inventoryManager.ToggleInventory();
@@ -141,12 +143,16 @@ public class ThirdPersonController : MonoBehaviour
 
             
     }
+
     private void HandleRotation()
     {
         Vector3 positionToLookAt;
         positionToLookAt.x = _currentMovement.x;
         positionToLookAt.y = 0;
         positionToLookAt.z = _currentMovement.z;
+
+        Debug.DrawLine(transform.position, positionToLookAt, Color.red, 3f);
+        Debug.Log(positionToLookAt);
 
         Quaternion currentRotation = transform.rotation;
         if(_isMovementPressed)
@@ -155,6 +161,7 @@ public class ThirdPersonController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(currentRotation, targetrRotation, _rotationFactor * Time.fixedDeltaTime);
         }
     }
+
     private void HandleAnimation()
     {
         bool isWalking = _animator.GetBool(isWalkingHash);

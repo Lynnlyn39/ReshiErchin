@@ -29,13 +29,12 @@ public class DialogueManager : MonoBehaviour
         else
         {
             instance = this;
+            dialogueIsPlaying = false;
+            dialoguePanel.SetActive(false);
         }
-    
     }
     private void Start()
     {
-        dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -59,6 +58,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        Debug.Log($"EnterDialogueMode {inkJSON.text}");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
