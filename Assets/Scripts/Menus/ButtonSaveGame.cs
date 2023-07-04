@@ -3,13 +3,13 @@ using UnityEngine.EventSystems;
 
 public class ButtonSaveGame : Button
 {
-    private Player _player;
+    //private Player _player;
     UnityEngine.UI.Button _button; 
 
     protected override void Start()
     {
         base.Start();
-        _player = FindObjectOfType<Player>();
+      //  _player = FindObjectOfType<Player>();
         _button = GetComponent<UnityEngine.UI.Button>();
     }
 
