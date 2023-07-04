@@ -5,7 +5,7 @@ using UnityEngine;
 public class Test_DayNightCycle : MonoBehaviour
 {
 
-    public int rotationScale = 5;
+    public float rotationScale = 0.25f;
 
 
     void Update()
