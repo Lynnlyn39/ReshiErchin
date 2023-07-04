@@ -5,22 +5,17 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    //private IA_ThirdPersonController _inventoryActionAsset;
-    //private InputAction _addToMix;
-    //private InputAction _resetMix;
 
     [SerializeField] private Pestle _pestle;
     [SerializeField] private Canvas _inventoryCanvas;
     [SerializeField] private CameraManager _cameraManager;
 
     [Tooltip("The time it takes to an ingredient to move into the pestle, in seconds")]
-    [SerializeField] private float _moveToMixTime = 1f;
+    [SerializeField] private float _moveToMixTime = 0.5f;
     [SerializeField] private LayerMask _inventoryLayerMask;
 
     [SerializeField] private AudioClip _addIngredientSfx;    
-    [SerializeField] private AudioSource _audioSource;
-    
-    
+    [SerializeField] private AudioSource _audioSource;   
     
     private Dictionary<InventoryItemSO, InventorySlot> _inventorySlots;
 
@@ -52,21 +47,11 @@ public class Inventory : MonoBehaviour
                 Debug.LogWarning($"Inventory slot: {slot.name} is missing an InventoryItemSO reference.");
             }
         }
-        //_inventoryActionAsset = new IA_ThirdPersonController();
         _inventoryCanvas.gameObject.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
-        //_inventoryActionAsset.Inventory.AddToMix.performed += OnAddToMix;
-        //_inventoryActionAsset.Inventory.ResetMix.performed += OnResetMix;
-        //_inventoryActionAsset.Inventory.ReturnToPlayer.performed += OnReturnToPlayer;
-        //_inventoryActionAsset.Inventory.Enable();        
     }
 
     private void OnDisable()
     {
-        //_inventoryActionAsset.Inventory.Disable();
         _inventoryCanvas.gameObject.SetActive(false);
     }
 
@@ -113,10 +98,8 @@ public class Inventory : MonoBehaviour
 
         Vector2 mousePosition = Mouse.current.position.ReadValue();        
         Ray ray = _cameraManager.InventoryCamera.ScreenPointToRay(mousePosition);
-        //Debug.DrawRay(ray.origin, ray.direction, Color.red, 3f);
         if (Physics.Raycast(ray, out hit, 1000f, InventoryLayerMask))
         {
-            Debug.Log("Raycast hit object " + hit.transform.name + " at the position of " + hit.transform.position);
             InventoryItem item = hit.transform.GetComponent<InventoryItem>();
             if (item && !_pestle.Ingredients.Contains(item)) 
             {
@@ -133,7 +116,7 @@ public class Inventory : MonoBehaviour
                 }               
             } else
             {
-                Debug.Log($"Not an InventoryItem");
+                Debug.Log($"{item.Data.Name} is not an ingredient");
             }            
         }
     }
@@ -149,13 +132,12 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log($"Prefab is missing in the InventoryItemSO {p_item.Data.Name}");            
         }
-        GameObject item = Instantiate(p_item.Data.Prefab, transform);
-        item.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        GameObject item = Instantiate(p_item.Data.Prefab, p_item.transform.parent);        
         _pestle.AddIngredient(item.GetComponent<InventoryItem>());
         item.transform.position = p_item.transform.position;
         float time = 0;
         Vector3 startPosition = item.transform.position;
-        Vector3 endPosition = _pestle.DropPoint; // + new Vector3(Random.value, 0f, Random.value);
+        Vector3 endPosition = _pestle.DropPoint;
         while (time < _moveToMixTime)
         {
             item.transform.position = Vector3.Lerp(startPosition, endPosition, time / _moveToMixTime);
