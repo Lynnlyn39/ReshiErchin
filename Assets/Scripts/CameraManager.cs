@@ -1,3 +1,4 @@
+using Cinemachine;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
@@ -6,19 +7,17 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private Camera _inventoryCamera;
     [SerializeField] private GameObject _inventoryCanvas;
+    [SerializeField] private CinemachineVirtualCamera _vcamInterior;
+    [SerializeField] private CinemachineVirtualCamera _vcamExterior;
 
     public Camera PlayerCamera { get => _playerCamera; set => _playerCamera = value; }
     public Camera InventoryCamera { get => _inventoryCamera; set => _inventoryCamera = value; }
 
-    private void Awake()
+    private void Start()
     {
         ActivatePlayerCamera();
-        //_playerActionAsset = new IA_ThirdPersonController();
-/*        _playerActionAsset.Player.Enable();
-        _playerActionAsset.Book.Disable();
-        _playerActionAsset.Inventory.Disable();
-*/
     }
+
     public void ActivateInventoryCamera()
     {
         PlayerCamera.enabled = false;
@@ -33,5 +32,22 @@ public class CameraManager : MonoBehaviour
         PlayerCamera.enabled = true;        
     }
 
+    public void ActivateInteriorCamera()
+    {
+        if (PlayerCamera.enabled)
+        {
+            _vcamExterior.enabled = false;
+            _vcamInterior.enabled = true;
+        }
+    }
+
+    public void ActivateExteriorCamera()
+    {
+        if (PlayerCamera.enabled)
+        {
+            _vcamInterior.enabled = false;
+            _vcamExterior.enabled = true;
+        }
+    }
 
 }

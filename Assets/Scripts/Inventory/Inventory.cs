@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
 
     public LayerMask InventoryLayerMask { get => _inventoryLayerMask; set => _inventoryLayerMask = value; }
 
-    private void Start()
+    private void Awake()
     {
         _inventorySlots = new Dictionary<InventoryItemSO, InventorySlot>();
         InventorySlot[] slots = FindObjectsOfType<InventorySlot>();
