@@ -9,13 +9,13 @@ public class ButtonSaveGame : Button
     protected override void Start()
     {
         base.Start();
-      //  _player = FindObjectOfType<Player>();
+      // _player = FindObjectOfType<Player>();
         _button = GetComponent<UnityEngine.UI.Button>();
     }
 
     private void OnEnable()
     {
-        //_button.enabled = !_player.IsUnderAttack && !_player.Target;
+        // _button.enabled = !_player.IsUnderAttack && !_player.Target;
     }
 
     public override void OnPointerClick(PointerEventData eventData)

@@ -9,9 +9,8 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _stackText;
     [SerializeField] private Canvas _canvas;
     private GameObject _instancedItem;
-
-
-    [SerializeField] private int _stack = 0;
+    [SerializeField] private int _initialStack = 0;
+    private int _stack = 0;
 
     public InventoryItemSO Data { get => _data; set => _data = value; }
     public int Stack
@@ -19,11 +18,14 @@ public class InventorySlot : MonoBehaviour
         get => _stack;
         set
         {
+            Debug.Log($"{Data.Name} stack set to {value}");
             _stack = value;
             _stackText.text = $"({_stack})";
             UpdateSlot();
         }
     }
+
+    public int InitialStack => _initialStack;
 
     private void Start()
     {

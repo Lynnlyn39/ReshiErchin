@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
 
     public LayerMask InventoryLayerMask { get => _inventoryLayerMask; set => _inventoryLayerMask = value; }
 
-    private void Awake()
+    private void Start()
     {
         _inventorySlots = new Dictionary<InventoryItemSO, InventorySlot>();
         InventorySlot[] slots = FindObjectsOfType<InventorySlot>();
@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
                         AddItem(slot.Data);
                     } else
                     {
-                        for (int i = 0; i < slot.Stack; i++)
+                        for (int i = 0; i < slot.InitialStack; i++)
                             AddItem(slot.Data);
                     }
                 }
