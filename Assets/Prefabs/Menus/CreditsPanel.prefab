@@ -606,7 +606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b><color=white>Game design</color></b>\r\n\nDonalynn  Cabrera\n\r\n<b><color=white>Programming</color></b>\r\n\nRicado
+  m_text: "<b><color=white>Game design</color></b>\r\n\nDonalynn jhoy Cabrera Mill\xE1n\n\r\n<b><color=white>Programming</color></b>\r\n\nRicardo
     Frias\n\nJose Ignacio Yarza\n\n<b>2023 - Universal Arts School</b>\n\r\n\r\n\r\n\r\n\r\n\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
