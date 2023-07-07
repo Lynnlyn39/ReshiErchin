@@ -53,7 +53,7 @@ public class ThirdPersonController : MonoBehaviour
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
 
-    private const float _threshold = 10f;
+    private const float _threshold = 50f;
 
     //[SerializeField] private Camera playerCamera;
     [SerializeField] private TextAsset startDialogue;
@@ -286,6 +286,7 @@ public class ThirdPersonController : MonoBehaviour
         _playerActionAsset.Player.Enable();
 
     }
+
     private void OnDisable()
     {
         _playerActionAsset.Player.Disable();

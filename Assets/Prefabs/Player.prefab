@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 155035118751990001}
   - component: {fileID: 3101385183109196731}
   - component: {fileID: 8340408393958706221}
+  - component: {fileID: 1291852931669197379}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -39,6 +40,7 @@ Transform:
   - {fileID: 9108772590570788214}
   - {fileID: 4714412911978396383}
   - {fileID: 6674275166693915913}
+  - {fileID: 1071713822532683529}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,6 +85,11 @@ MonoBehaviour:
   _inventoryManager: {fileID: 0}
   _bookManager: {fileID: 0}
   cameraManager: {fileID: 0}
+  CinemachineCameraTarget: {fileID: 5599249669174889391}
+  TopClamp: 40
+  BottomClamp: -10
+  CameraAngleOverride: 0
+  LockCameraPosition: 0
   startDialogue: {fileID: 4900000, guid: 11d3005fa56381842b9200b7abf73d09, type: 3}
 --- !u!114 &5918468658312567998
 MonoBehaviour:
@@ -262,6 +269,73 @@ MonoBehaviour:
   _inventory: {fileID: 0}
   _sfxCollect: {fileID: 11400000, guid: 068010d23b8e03049a31fb829b042196, type: 2}
   _sfxPlayer: {fileID: 155035118751990001}
+--- !u!114 &1291852931669197379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738557903263781573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 0cdbc1d1634d90c4fb62a9d13aa79b98,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b382fdf1-5b67-45cd-9cc1-f7aafa418b50
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ae07ba88-c914-472c-9bda-b3aaf0ac535f
+    m_ActionName: Player/Run[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 748a00c9-4360-40a2-a03d-aba6f352df51
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91ca1992-22b6-4aff-b56f-67f97d21761b
+    m_ActionName: Player/Interact[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9f8436ff-ddde-402f-bafe-799e8705a952
+    m_ActionName: Player/Inventory[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 85c58e22-91d8-4dd1-b20c-bfc2a46b5976
+    m_ActionName: Player/Submit[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd161405-5655-46d2-bde5-0cb77762c1c5
+    m_ActionName: Player/Book[/Keyboard/b]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a3455107-f7e8-4bba-96a1-adae5d7476c0
+    m_ActionName: Player/AddToMix[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cc697213-3d6d-4d57-8d17-b7afb565ff2f
+    m_ActionName: Player/ResetMix[/Mouse/rightButton]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &4931194088406799214
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +366,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3228850688057146755}
   m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5599249669174889391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071713822532683529}
+  m_Layer: 7
+  m_Name: ' PlayerCameraRoot'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1071713822532683529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599249669174889391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3228850688057146755}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6010631536722687853
 PrefabInstance:
