@@ -47,12 +47,12 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                 },
                 {
                     ""name"": ""Look"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""748a00c9-4360-40a2-a03d-aba6f352df51"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Interact"",
@@ -214,7 +214,7 @@ public partial class @IA_ThirdPersonController: IInputActionCollection2, IDispos
                     ""id"": ""a2bf91c2-234e-4d87-a546-92a6100c7deb"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""InvertVector2(invertX=false)"",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Look"",
                     ""isComposite"": false,

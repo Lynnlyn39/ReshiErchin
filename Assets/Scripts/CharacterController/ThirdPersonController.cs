@@ -1,11 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class ThirdPersonController : MonoBehaviour
 {
@@ -17,6 +11,12 @@ public class ThirdPersonController : MonoBehaviour
     private CharacterController _characterController;
     private Animator _animator;
     public CameraManager cameraManager;
+    //private StarterAssetsInputs _input;
+
+#if ENABLE_INPUT_SYSTEM
+    private PlayerInput _playerInput;
+#endif
+
 
     int isWalkingHash;
     int isRunningHash;
@@ -24,17 +24,51 @@ public class ThirdPersonController : MonoBehaviour
     private Vector2 _currentMovementInput;
     private Vector3 _currentMovement;
     private Vector3 _currentRunMovement;
+    private Vector2 look;
 
     bool _isMovementPressed;
     bool _isRunPressed;
-    float _rotationFactor = 1f;
+    float _rotationFactor = 2f;
     float _runMultiplier = 3f;
 
     private Interactor _interactor;
 
+    [Header("Cinemachine")]
+    [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
+    public GameObject CinemachineCameraTarget;
+
+    [Tooltip("How far in degrees can you move the camera up")]
+    public float TopClamp = 70.0f;
+
+    [Tooltip("How far in degrees can you move the camera down")]
+    public float BottomClamp = -30.0f;
+
+    [Tooltip("Additional degress to override the camera. Useful for fine tuning camera position when locked")]
+    public float CameraAngleOverride = 0.0f;
+
+    [Tooltip("For locking the camera position on all axis")]
+    public bool LockCameraPosition = false;
+
+    // cinemachine
+    private float _cinemachineTargetYaw;
+    private float _cinemachineTargetPitch;
+
+    private const float _threshold = 10f;
+
     //[SerializeField] private Camera playerCamera;
     [SerializeField] private TextAsset startDialogue;
 
+    private bool IsCurrentDeviceMouse
+    {
+        get
+        {
+#if ENABLE_INPUT_SYSTEM
+            return _playerInput.currentControlScheme == "KeyboardMouse";
+#else
+				return false;
+#endif
+        }
+    }
 
     private void Awake()
     {
@@ -42,6 +76,8 @@ public class ThirdPersonController : MonoBehaviour
         _playerActionAsset.Player.Move.started += OnMovementInput;
         _playerActionAsset.Player.Move.canceled += OnMovementInput;
         _playerActionAsset.Player.Move.performed += OnMovementInput;
+        _playerActionAsset.Player.Look.performed += OnLook;
+
         _playerActionAsset.Player.Interact.performed += Interact;
 
         _playerActionAsset.Player.Inventory.performed += OnInventoryInput;
@@ -58,6 +94,14 @@ public class ThirdPersonController : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+
+        _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
+        
+#if ENABLE_INPUT_SYSTEM
+        _playerInput = GetComponent<PlayerInput>();
+#else
+			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
+#endif
 
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
@@ -144,13 +188,19 @@ public class ThirdPersonController : MonoBehaviour
             
     }
 
+    private void LateUpdate()
+    {
+        CameraRotation();
+    }
+
     private void HandleRotation()
     {
         Vector3 positionToLookAt;
+        
         positionToLookAt.x = _currentMovement.x;
         positionToLookAt.y = 0;
         positionToLookAt.z = _currentMovement.z;
-        
+
         Quaternion currentRotation = transform.rotation;
         if(_isMovementPressed)
         {
@@ -197,6 +247,40 @@ public class ThirdPersonController : MonoBehaviour
             _currentRunMovement.y = gravity;
         }
     }
+
+    public void OnLook(InputAction.CallbackContext context)
+    {
+        look = context.ReadValue<Vector2>();
+    }
+
+    private void CameraRotation()
+    {
+        // if there is an input and camera position is not fixed
+        if (look.sqrMagnitude >= _threshold && !LockCameraPosition)
+        {
+            //Don't multiply mouse input by Time.deltaTime;
+            float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+
+            _cinemachineTargetYaw += look.x * deltaTimeMultiplier;
+            _cinemachineTargetPitch += look.y * deltaTimeMultiplier;
+        }
+
+        // clamp our rotations so our values are limited 360 degrees
+        _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
+        _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+
+        // Cinemachine will follow this target
+        CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
+            _cinemachineTargetYaw, 0.0f);
+    }
+
+    private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+    {
+        if (lfAngle < -360f) lfAngle += 360f;
+        if (lfAngle > 360f) lfAngle -= 360f;
+        return Mathf.Clamp(lfAngle, lfMin, lfMax);
+    }
+
     private void OnEnable()
     {
         _playerActionAsset.Player.Enable();
